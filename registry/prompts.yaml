@@ -1,0 +1,233 @@
+# Auto-maintained index for EasyVibeCoding V0.1 — keep in sync with actual files. All entries: status=experimental, verified=false (not yet runtime-verified).
+version: "0.1.0"
+prompts:
+  - id: start-project
+    name: 开始项目
+    description: 引导用户从零启动一个新项目并明确目标、范围与下一步。
+    category: start-here
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/start-here/start-project.md
+    version: 0.1.0
+  - id: understand-project
+    name: 理解项目
+    description: 快速读懂现有项目的结构、依赖与运行方式以建立全局认知。
+    category: start-here
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/start-here/understand-project.md
+    version: 0.1.0
+  - id: ask-ai-correctly
+    name: 正确提问
+    description: 提供高质量提问模板以获得更准确、可复现的 AI 回答。
+    category: start-here
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/start-here/ask-ai-correctly.md
+    version: 0.1.0
+  - id: analyze-requirement
+    name: 分析需求
+    description: 将业务需求拆解为功能点、边界条件与验收标准。
+    category: architecture
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/architecture/analyze-requirement.md
+    version: 0.1.0
+  - id: design-architecture
+    name: 设计架构
+    description: 输出模块划分、技术选型与关键决策说明的架构方案。
+    category: architecture
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/architecture/design-architecture.md
+    version: 0.1.0
+  - id: write-development-plan
+    name: 编写开发计划
+    description: 生成按里程碑分阶段、可追踪的开发计划与任务清单。
+    category: architecture
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/architecture/write-development-plan.md
+    version: 0.1.0
+  - id: implement-feature
+    name: 实现功能
+    description: 按需求与计划编写功能代码并保持简洁与可测试。
+    category: coding
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/coding/implement-feature.md
+    version: 0.1.0
+  - id: explain-code
+    name: 解释代码
+    description: 用清晰语言逐段解释代码逻辑、意图与潜在风险。
+    category: coding
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/coding/explain-code.md
+    version: 0.1.0
+  - id: refactor-code
+    name: 重构代码
+    description: 在不改变行为前提下优化结构、命名与重复以提升可维护性。
+    category: coding
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/coding/refactor-code.md
+    version: 0.1.0
+  - id: debug-error
+    name: 调试错误
+    description: 基于错误信息定位根因并给出最小修复方案。
+    category: debugging
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/debugging/debug-error.md
+    version: 0.1.0
+  - id: analyze-stacktrace
+    name: 分析堆栈
+    description: 解读堆栈跟踪并定位关键调用与异常来源。
+    category: debugging
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/debugging/analyze-stacktrace.md
+    version: 0.1.0
+  - id: fix-regression
+    name: 修复回归
+    description: 识别回归来源并制定安全、可验证的修复策略。
+    category: debugging
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/debugging/fix-regression.md
+    version: 0.1.0
+  - id: write-tests
+    name: 编写测试
+    description: 为功能编写覆盖正常与边界场景的自动化测试。
+    category: testing
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/testing/write-tests.md
+    version: 0.1.0
+  - id: verify-feature
+    name: 验证功能
+    description: 按验收标准逐项核验功能是否达到交付要求。
+    category: testing
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/testing/verify-feature.md
+    version: 0.1.0
+  - id: code-review
+    name: 代码审查
+    description: 从可读性、健壮性与规范一致性维度评审代码变更。
+    category: review
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/review/code-review.md
+    version: 0.1.0
+  - id: security-review
+    name: 安全审查
+    description: 检查常见安全漏洞与敏感信息泄露风险并提出修复建议。
+    category: review
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/review/security-review.md
+    version: 0.1.0
+  - id: performance-review
+    name: 性能审查
+    description: 识别性能瓶颈与资源消耗热点并给出优化方向。
+    category: review
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/review/performance-review.md
+    version: 0.1.0
+  - id: build-rag
+    name: 构建 RAG
+    description: 搭建文档检索增强生成链路：分块、向量化、检索与拼装。
+    category: ai-app
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/ai-app/build-rag.md
+    version: 0.1.0
+  - id: build-agent
+    name: 构建 Agent
+    description: 搭建具备规划、工具调用与多步执行能力的 AI Agent。
+    category: ai-app
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/ai-app/build-agent.md
+    version: 0.1.0
+  - id: build-memory
+    name: 构建记忆
+    description: 为 AI 应用实现短期与长期记忆以保持上下文连续性。
+    category: ai-app
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/ai-app/build-memory.md
+    version: 0.1.0
+  - id: build-context
+    name: 构建上下文
+    description: 设计提示词与上下文窗口策略以稳定引导模型行为。
+    category: ai-app
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/ai-app/build-context.md
+    version: 0.1.0
+  - id: build-mcp-tool
+    name: 构建 MCP 工具
+    description: 基于 MCP 协议封装并暴露可被模型调用的工具能力。
+    category: ai-app
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/ai-app/build-mcp-tool.md
+    version: 0.1.0
+  - id: release-checklist
+    name: 发布检查清单
+    description: 提供发布前必查项清单以降低上线风险并保障可回滚。
+    category: deployment
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/deployment/release-checklist.md
+    version: 0.1.0

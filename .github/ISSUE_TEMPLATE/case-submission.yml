@@ -1,0 +1,110 @@
+name: Case Submission
+description: 提交一个案例（Case）—— 用 AI 工程化方式做出的真实可运行软件
+title: "[Case]: <name>"
+labels: ["case", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢贡献案例！
+
+        > ⚠️ 诚实原则：验证状态必须真实。若标注 **Verified**，须在本 Issue 中附可复现证据
+        > （可运行的代码 / 截图 / 录屏）。无法提供证据时，请选 **Not Yet Verified**，
+        > 否则将被驳回。禁止伪造测试结果、stars 或性能数字。
+
+  - type: textarea
+    id: project-goal
+    attributes:
+      label: Project Goal
+      description: 项目目标（这个软件做什么、为谁做）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      description: 难度等级
+      options:
+        - beginner
+        - intermediate
+        - advanced
+        - golden
+    validations:
+      required: true
+
+  - type: textarea
+    id: tech-stack
+    attributes:
+      label: Tech Stack
+      description: 技术栈（语言 / 框架 / 工具）
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-scenario
+    attributes:
+      label: User Scenario
+      description: 用户场景（谁来用、为什么用、解决什么痛点）
+    validations:
+      required: true
+
+  - type: textarea
+    id: mvp
+    attributes:
+      label: MVP
+      description: 最小可行产品范围（包含/不包含哪些功能）
+    validations:
+      required: true
+
+  - type: textarea
+    id: used-skills
+    attributes:
+      label: Used Skills
+      description: 使用了哪些 Skills（路径或名称）
+    validations:
+      required: true
+
+  - type: textarea
+    id: used-prompts
+    attributes:
+      label: Used Prompts
+      description: 使用了哪些 Prompts
+    validations:
+      required: true
+
+  - type: textarea
+    id: used-workflows
+    attributes:
+      label: Used Workflows
+      description: 使用了哪些 Workflows
+    validations:
+      required: true
+
+  - type: dropdown
+    id: verification-status
+    attributes:
+      label: Verification Status
+      description: ⚠️ 选 Verified 须附可复现证据；否则请选 Not Yet Verified
+      options:
+        - Not Yet Verified
+        - Verified
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: Path
+      description: 案例目录路径
+      placeholder: "cases/<name>/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: lessons
+    attributes:
+      label: Lessons Learned
+      description: 经验教训（踩过的坑、关键决策）
+    validations:
+      required: true

@@ -1,0 +1,98 @@
+name: Bug Report
+description: 报告 EasyVibeCoding 中 Skill / Prompt / Case / Workflow 的缺陷
+title: "[Bug]: <summary>"
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交 Bug 报告！请尽量填写完整信息，便于快速定位与修复。
+
+        > 说明：EasyVibeCoding 当前为 V0.1，CI 验证状态为 ⚠️ Not Yet Verified in CI runtime。
+        > 若 Bug 与"未验证"内容相关，请在 Severity 中如实反映。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: 一句话描述遇到的问题
+      placeholder: "例如：使用 skill-bootstrap 时，生成的目录结构与 SKILL.md 描述不符"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: Reproduce Steps
+      description: 复现步骤（按顺序列出，便于他人重现）
+      placeholder: |
+        1. 打开 / 运行 ...
+        2. 输入 ...
+        3. 观察到 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: 期望发生什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: 实际发生了什么（可贴关键输出/报错）
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: 使用的 AI 编程工具 / 模型（如 claude-code / cursor / codex / gemini-cli 及模型版本）
+      placeholder: "claude-code (sonnet-4.5) / cursor / codex / gemini-cli"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: EasyVibeCoding Version
+      description: 使用的 EasyVibeCoding 版本
+      placeholder: "V0.1"
+      value: "V0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: Relevant Skill/Prompt/Case Path
+      description: 相关文件路径（位于 skills/ prompts/ cases/ workflows/ 下）
+      placeholder: "skills/project-bootstrap/SKILL.md"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: 严重程度
+      options:
+        - low
+        - medium
+        - high
+        - critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: 截图、日志、输出片段（可选）
+    validations:
+      required: false

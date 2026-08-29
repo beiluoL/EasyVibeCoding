@@ -1,0 +1,53 @@
+# Auto-maintained index for EasyVibeCoding V0.1 — keep in sync with actual files. All entries: status=experimental, verified=false (not yet runtime-verified).
+version: "0.1.0"
+cases:
+  - id: 001-ai-chat
+    name: AI 聊天应用
+    description: 从零用 AI 做一个能聊天的 Web 应用
+    category: golden
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: cases/golden/001-ai-chat/README.md
+    version: 0.1.0
+  - id: 002-rag-app
+    name: RAG 问答应用
+    description: 基于文档问答的 RAG 应用
+    category: golden
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: cases/golden/002-rag-app/README.md
+    version: 0.1.0
+  - id: 003-ai-agent
+    name: AI Agent
+    description: 能自主调用工具完成任务的 AI Agent
+    category: golden
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: cases/golden/003-ai-agent/README.md
+    version: 0.1.0
+  - id: 004-ai-learning-assistant
+    name: AI 学习助手
+    description: 个性化 AI 学习助手
+    category: golden
+    difficulty: intermediate
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: cases/golden/004-ai-learning-assistant/README.md
+    version: 0.1.0
+  - id: 005-ai-saas
+    name: AI SaaS 平台
+    description: 多租户 AI SaaS 平台 MVP
+    category: golden
+    difficulty: advanced
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: cases/golden/005-ai-saas/README.md
+    version: 0.1.0

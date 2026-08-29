@@ -1,0 +1,69 @@
+name: Feature Request
+description: 提交功能请求 / 改进建议
+title: "[Feature]: <summary>"
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提出功能建议！请描述清楚问题与期望方案。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: 功能概述（一句话）
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem It Solves
+      description: 该功能解决什么问题 / 痛点
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: 建议的解决方案
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: 考虑过的替代方案及为何未采纳
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: 影响的领域
+      options:
+        - skills
+        - prompts
+        - cases
+        - workflows
+        - benchmarks
+        - validators
+        - docs
+        - CI
+    validations:
+      required: true
+
+  - type: dropdown
+    id: breaking-change
+    attributes:
+      label: Breaking Change?
+      description: 是否为破坏性变更
+      options:
+        - "no"
+        - "yes"
+    validations:
+      required: true

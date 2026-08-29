@@ -1,0 +1,102 @@
+name: Prompt Submission
+description: 提交一个 Prompt（可复用的提示词模板）
+title: "[Prompt]: <name>"
+labels: ["prompt", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢贡献 Prompt！提交前请确认：
+        - 已阅读 `templates/` 下的 Prompt schema
+        - Prompt 文本可直接复制使用
+
+  - type: input
+    id: prompt-name
+    attributes:
+      label: Prompt Name
+      description: Prompt 名称（slug 形式）
+      placeholder: "spec-first-planning"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-when
+    attributes:
+      label: Use When
+      description: 何时使用该 Prompt
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: 该 Prompt 想达成的目标
+    validations:
+      required: true
+
+  - type: textarea
+    id: input-vars
+    attributes:
+      label: Input Variables
+      description: 输入变量（占位符及其含义）
+      placeholder: "{{project_name}}, {{tech_stack}}"
+    validations:
+      required: true
+
+  - type: textarea
+    id: full-prompt
+    attributes:
+      label: Full Prompt Text
+      description: 完整 Prompt 文本（可直接复制使用）
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: 期望 AI 在收到该 Prompt 后的行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-output
+    attributes:
+      label: Expected Output
+      description: 期望的输出形式 / 结构
+    validations:
+      required: true
+
+  - type: textarea
+    id: common-mistakes
+    attributes:
+      label: Common Mistakes
+      description: 常见错误用法（应避免的写法）
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-skills
+    attributes:
+      label: Related Skills
+      description: 关联的 Skills
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-workflows
+    attributes:
+      label: Related Workflows
+      description: 关联的 Workflows
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: 验证方式（如何确认该 Prompt 有效）
+    validations:
+      required: true

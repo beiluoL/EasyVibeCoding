@@ -1,0 +1,50 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Build artifacts ---
+build/
+dist/
+*.egg-info/
+*.egg
+
+# --- Secrets / env (never commit) ---
+.env
+.env.*
+!.env.example
+
+# --- OS / misc ---
+Thumbs.db
+
+# IMPORTANT: do NOT ignore these — they are tracked content:
+#   registry/        (YAML metadata)
+#   templates/       (asset templates)
+#   skills/          (skill content)
+#   prompts/         (prompt content)

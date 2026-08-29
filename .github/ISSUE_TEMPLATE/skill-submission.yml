@@ -1,0 +1,109 @@
+name: Skill Submission
+description: 提交一个新的 Skill（可复用的 AI 编程能力封装）
+title: "[Skill]: <name>"
+labels: ["skill", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢贡献 Skill！提交前请确认：
+        - 已阅读 `templates/` 下的 Skill schema
+        - SKILL.md 已按规范编写
+        - 已在 `registry/skills.yaml` 登记
+
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill Name
+      description: Skill 名称（slug 形式，小写中划线）
+      placeholder: "project-bootstrap"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Solved
+      description: 这个 Skill 解决什么问题
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: 典型使用场景
+    validations:
+      required: true
+
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Trigger Conditions
+      description: 何时触发该 Skill（关键词 / 意图 / 条件）
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: 该 Skill 需要的输入
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: 该 Skill 产出的内容
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation Approach
+      description: 如何验证该 Skill 有效（复现步骤 / 预期结果）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Compatibility
+      description: 兼容的 AI 编程工具
+      options:
+        - claude-code
+        - cursor
+        - codex
+        - gemini-cli
+        - unspecified
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security Considerations
+      description: 安全考虑（敏感数据处理、权限要求、外部调用等）
+    validations:
+      required: true
+
+  - type: input
+    id: skill-md-path
+    attributes:
+      label: Path to SKILL.md
+      description: SKILL.md 文件路径
+      placeholder: "skills/<name>/SKILL.md"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: registry-updated
+    attributes:
+      label: Registry Updated
+      description: 是否已在 registry/*.yaml 中登记
+      options:
+        - label: 我已更新 registry/skills.yaml
+          required: true

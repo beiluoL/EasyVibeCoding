@@ -1,0 +1,25 @@
+# markdownlint configuration for EasyVibeCoding
+# https://github.com/DavidAnson/markdownlint
+
+# MD013: line length — 关闭，中文长行不强制换行
+MD013: false
+
+# MD033: allow inline HTML (用于 Mermaid / 注释 / badges)
+MD033:
+  allowed_elements: [div, br, img, a, details, summary, sub, sup]
+
+# MD041: first line in a file should be a top-level heading
+MD041: true
+
+# MD040: fenced code blocks should have a language specified
+MD040: true
+
+# MD024: no duplicate headings — 允许同级同名（siblings）
+MD024:
+  siblings_only: true
+
+# MD036: do not use emphasis as heading
+MD036: false
+
+# 其余使用默认值
+default: true
