@@ -12,7 +12,10 @@ EasyVibeCoding 是一套开源的「Vibe Coding 工程化方法论」——让�
 
 ```text
 EasyVibeCoding/
-├── README.md                # 首页与导航
+├── README.md                # 首页与导航（简体中文，默认）
+├── README.en.md             # 首页（English 翻译）
+├── README.zh-TW.md          # 首页（繁體中文 翻译）
+├── docs/i18n-contributing.md# 多语言 / i18n 贡献指南
 ├── AGENTS.md                # 本文件（代理记忆）
 ├── CONTRIBUTING.md          # 贡献指南
 ├── CODE_OF_CONDUCT.md       # 行为准则
@@ -100,14 +103,35 @@ EasyVibeCoding/
 
 - 先复用后新增；小步提交；用模板；跑校验器；更新 registry；如实标注验证状态。
 
+## Multilingual / i18n Rules（多语言规则）
+
+详见 [docs/i18n-contributing.md](docs/i18n-contributing.md)。要点：
+
+- 默认首页永远是简体中文的 `README.md`（GitHub 默认读取它）。
+- 其它语言使用独立文件：`README.<lang>.md`（如 `README.en.md` / `README.zh-TW.md`），**不要**创建 `zh/` 或 `en/` 子目录放 README。
+- 每份 README 顶部必须放**统一格式的语言切换横幅**（见下）。当前语言项用 `<strong>` 加粗，其它语言用 `<a href="README.<lang>.md">` 链接。
+- 修改默认 `README.md` 后，**优先同步更新** README.en.md / README.zh-TW.md，否则请在改动处留一段：
+  `<!-- TODO(i18n): sync this new section to README.en.md and README.zh-TW.md -->`
+- 语言切换横幅（简体中文示例；其它语言替换强高亮项与文案翻译即可）：
+
+```html
+<div align="right">
+  <a href="README.en.md">🌏 English</a> · <strong>🇨🇳 简体中文</strong> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
+</div>
+```
+
+- 翻译诚实标记必须保留：`⚠️ Not Yet Verified` / `Status: experimental` / `Planned`——**严禁因为翻译把“未验证”译成“已验证”**。
+- 社区翻译请在横幅下方追加一行：
+  `> ⚠️ Community translation, may lag the latest default (Simplified Chinese) version.`
+
 ---
 
 ## Before editing（编辑前 5 步）
 
 任何代理在修改本仓库内容前，**必须**按序完成：
 
-1. 读 [README.md](README.md) —— 理解项目定位与导航。
-2. 读 [AGENTS.md](AGENTS.md)（本文件）—— 理解内容标准与验证规则。
+1. 读 [README.md](README.md) —— 理解项目定位与导航，并留意顶部语言横幅的多语言 README 入口。
+2. 读 [AGENTS.md](AGENTS.md)（本文件）—— 理解内容标准与验证规则；若涉及多语言翻译，再读 [docs/i18n-contributing.md](docs/i18n-contributing.md)。
 3. 读相关 `templates/` 模板 —— 确保字段与结构正确。
 4. 读相关已有内容 —— 避免重复，保持风格一致。
 5. 遵守校验规则 —— 跑 validator、更新 registry、如实标注验证状态、自查安全。

@@ -1,9 +1,15 @@
+<div align="right">
+  <a href="README.en.md">🌏 English</a> · <strong>🇨🇳 简体中文</strong> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
+</div>
+
 # EasyVibeCoding 🚀
 
 > **From Prompt to Production.**
 > 让不会编程的人，也能用 AI 按工程化方式做出真正能运行的软件。
 
 [Start Here](docs/getting-started/01-what-is-vibe-coding.md) · [Browse Cases](cases/golden/) · [Browse Skills](skills/) · [Browse Prompts](prompts/)
+
+> 🌏 **可切换的多语言版本**：点击右上角横幅选择英文 / 繁體中文。详见 [docs/i18n-contributing.md](docs/i18n-contributing.md) 如何贡献新的语言翻译。
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Version](https://img.shields.io/badge/version-V0.1-orange)
