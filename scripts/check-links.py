@@ -98,6 +98,10 @@ def check_links_in_file(md, root):
     return broken
 
 
+# Lines containing this marker are intentionally showing fake/example keys and are safe.
+SAFE_EXEMPT = re.compile(r"(safe:\s*(example|demo|fake|placeholder|teaching|exempt)|not-a-real-key|placeholder-key|example-key|fake-key|redacted|# safe|<!-- safe)", re.IGNORECASE)
+
+
 def scan_secrets(root):
     findings = []
     for p in iter_files(root):
@@ -108,6 +112,8 @@ def scan_secrets(root):
         except Exception:
             continue
         for line_idx, line in enumerate(text.splitlines(), start=1):
+            if SAFE_EXEMPT.search(line):
+                continue
             for pat in SECRET_PATTERNS:
                 m = pat.search(line)
                 if m:

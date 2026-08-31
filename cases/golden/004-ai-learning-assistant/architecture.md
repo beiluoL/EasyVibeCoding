@@ -22,5 +22,5 @@ flowchart TD
 - 个性化 prompt：把画像 + 记忆 + 检索结果拼进去
 
 ## 相关
-- [skills/ai/rag.md](../../../skills/ai/rag.md)
-- [skills/ai/memory.md](../../../skills/ai/memory.md)
+- [skills/ai/rag.md](../../../skills/ai/rag/SKILL.md)
+- [skills/ai/memory.md](../../../skills/ai/memory/SKILL.md)

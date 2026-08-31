@@ -26,4 +26,4 @@
 - 完整示例：[examples/](./examples/README.md)
 - 上游技能：[../requirement-analysis/SKILL.md](../requirement-analysis/SKILL.md)、[../brainstorming/SKILL.md](../brainstorming/SKILL.md)
 - 下游技能：[../task-planning/SKILL.md](../task-planning/SKILL.md)
-- 配套 Prompt 模板：[../../../../prompts/architecture-template.md](../../../../prompts/architecture-template.md)
+- 配套 Prompt 模板：[../../../prompts/architecture/design-architecture.md](../../../prompts/architecture/design-architecture.md)

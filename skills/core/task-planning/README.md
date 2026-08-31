@@ -25,4 +25,4 @@
 - 详细规范：[SKILL.md](./SKILL.md)
 - 完整示例：[examples/](./examples/README.md)
 - 上游技能：[../architecture-design/SKILL.md](../architecture-design/SKILL.md)、[../requirement-analysis/SKILL.md](../requirement-analysis/SKILL.md)
-- 配套 Prompt 模板：[../../../../prompts/task-breakdown.md](../../../../prompts/task-breakdown.md)
+- 配套 Prompt 模板：[../../../prompts/architecture/write-development-plan.md](../../../prompts/architecture/write-development-plan.md)

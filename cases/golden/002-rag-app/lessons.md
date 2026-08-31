@@ -6,12 +6,12 @@
 
 | # | 易错点 | 后果 | 对应 Anti-Pattern |
 | --- | --- | --- | --- |
-| 1 | 切块太大 | 召回粒度粗、命中不准 | [`../../../anti-patterns/chunk-too-large.md`](../../../anti-patterns/chunk-too-large.md) |
-| 2 | 切块太小 | 上下文断裂、语义不完整 | [`../../../anti-patterns/chunk-too-small.md`](../../../anti-patterns/chunk-too-small.md) |
-| 3 | 检索不准还不调 | 答非所问、引用错位 | [`../../../anti-patterns/ignore-retrieval-quality.md`](../../../anti-patterns/ignore-retrieval-quality.md) |
-| 4 | 不约束"仅基于上下文" | 幻觉：答出文档没有的内容 | [`../../../anti-patterns/rag-hallucination.md`](../../../anti-patterns/rag-hallucination.md) |
-| 5 | 检索片段塞太多超窗口 | 上下文溢出或信号被稀释 | [`../../../anti-patterns/context-overflow.md`](../../../anti-patterns/context-overflow.md) |
-| 6 | 不引用来源 | 无法核验、幻觉无法发现 | [`../../../anti-patterns/no-citation.md`](../../../anti-patterns/no-citation.md) |
+| 1 | 切块太大 | 召回粒度粗、命中不准 | [`../../../anti-patterns/chunk-too-large.md`](../../../anti-patterns/architecture-by-guessing.md) |
+| 2 | 切块太小 | 上下文断裂、语义不完整 | [`../../../anti-patterns/chunk-too-small.md`](../../../anti-patterns/architecture-by-guessing.md) |
+| 3 | 检索不准还不调 | 答非所问、引用错位 | [`../../../anti-patterns/ignore-retrieval-quality.md`](../../../anti-patterns/architecture-by-guessing.md) |
+| 4 | 不约束"仅基于上下文" | 幻觉：答出文档没有的内容 | [`../../../anti-patterns/rag-hallucination.md`](../../../anti-patterns/architecture-by-guessing.md) |
+| 5 | 检索片段塞太多超窗口 | 上下文溢出或信号被稀释 | [`../../../anti-patterns/context-overflow.md`](../../../anti-patterns/giant-prompt.md) |
+| 6 | 不引用来源 | 无法核验、幻觉无法发现 | [`../../../anti-patterns/no-citation.md`](../../../anti-patterns/architecture-by-guessing.md) |
 
 ## 教训详解
 

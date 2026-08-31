@@ -43,12 +43,12 @@ Agent 自主拆成"查今天温度 → 查明天温度 → 算温差 → 给答�
 6. 汇总输出
 
 ## Prompts
-- Planner：[prompts/agent-planner.md](../../../prompts/agent-planner.md)
-- Summary：[prompts/agent-summary.md](../../../prompts/agent-summary.md)
+- Planner：[prompts/agent-planner.md](../../../prompts/ai-app/build-agent.md)
+- Summary：[prompts/agent-summary.md](../../../prompts/ai-app/build-agent.md)
 
 ## Skills
-- [skills/ai/agent.md](../../../skills/ai/agent.md)
-- [skills/ai/tool-calling.md](../../../skills/ai/tool-calling.md)
+- [skills/ai/agent.md](../../../skills/ai/agent/SKILL.md)
+- [skills/ai/tool-calling.md](../../../skills/ai/tool-calling/SKILL.md)
 
 ## Testing
 - 给一个需 2 步 + 调工具的任务，看是否串起来

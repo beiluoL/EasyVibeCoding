@@ -43,12 +43,12 @@ intermediate（中级）
 5. 更新记忆
 
 ## Prompts
-- 画像：[prompts/learning-profile.md](../../../prompts/learning-profile.md)
-- 答疑：[prompts/learning-answer.md](../../../prompts/learning-answer.md)
+- 画像：[prompts/learning-profile.md](../../../prompts/ai-app/build-memory.md)
+- 答疑：[prompts/learning-answer.md](../../../prompts/ai-app/build-rag.md)
 
 ## Skills
-- [skills/ai/rag.md](../../../skills/ai/rag.md)
-- [skills/ai/memory.md](../../../skills/ai/memory.md)
+- [skills/ai/rag.md](../../../skills/ai/rag/SKILL.md)
+- [skills/ai/memory.md](../../../skills/ai/memory/SKILL.md)
 
 ## Testing
 - 两次同主题问答看是否记得上文

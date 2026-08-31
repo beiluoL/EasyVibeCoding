@@ -26,4 +26,4 @@
 - 完整示例：[examples/](./examples/README.md)
 - 上游技能：[../project-discovery/SKILL.md](../project-discovery/SKILL.md)
 - 下游技能：[../brainstorming/SKILL.md](../brainstorming/SKILL.md)
-- 配套 Prompt 模板：[../../../../prompts/requirement-checklist.md](../../../../prompts/requirement-checklist.md)
+- 配套 Prompt 模板：[../../../prompts/architecture/analyze-requirement.md](../../../prompts/architecture/analyze-requirement.md)

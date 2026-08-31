@@ -86,7 +86,7 @@ T-001 → T-002 → T-003 → T-004（共 9h ≈ 1.5 天）
 - [task-planning](../../skills/core/task-planning/SKILL.md)
 
 ## Related Workflows
-- [feature-development](../../workflows/feature-development.md)
+- [feature-development](../../workflows/feature-development/README.md)
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

@@ -25,4 +25,4 @@
 - 详细规范：[SKILL.md](./SKILL.md)
 - 完整示例：[examples/](./examples/README.md)
 - 下游技能：[../requirement-analysis/SKILL.md](../requirement-analysis/SKILL.md)
-- 配套 Prompt 模板：[../../../../prompts/project-brief.md](../../../../prompts/project-brief.md)
+- 配套 Prompt 模板：[../../../prompts/start-here/start-project.md](../../../prompts/start-here/start-project.md)

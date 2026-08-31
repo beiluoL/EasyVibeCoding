@@ -114,7 +114,7 @@ function calculateTotal(items, tax, discount) {
 - [code-review](../../skills/core/code-review/SKILL.md)
 
 ## Related Workflows
-- 暂无独立 workflow，可作为 [feature-development](../../workflows/feature-development.md) 的"质量回填"环节。
+- 暂无独立 workflow，可作为 [feature-development](../../workflows/feature-development/README.md) 的"质量回填"环节。
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

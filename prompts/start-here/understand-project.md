@@ -97,7 +97,7 @@
 - [brainstorming](../../skills/core/brainstorming/SKILL.md)
 
 ## Related Workflows
-- 暂无对应 workflow，可参考 [start-project](../../workflows/start-project.md) 的"理解现状"环节。
+- 暂无对应 workflow，可参考 [start-project](../../workflows/start-project/README.md) 的"理解现状"环节。
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

@@ -42,5 +42,5 @@ AI 改了前端 `login.vue`，后端问题原封不动；前端原本正常的�
 
 ## Related Skill
 
-- 相关技能：[implementation](../../skills/implementation.md)
+- 相关技能：[implementation](../../skills/core/implementation/SKILL.md)
 - 相关反模式：[blind-rewrite](../../anti-patterns/blind-rewrite.md)

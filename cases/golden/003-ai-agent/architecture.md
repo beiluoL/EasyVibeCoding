@@ -38,5 +38,5 @@ flowchart TD
 - deny：拒绝执行并报原因
 
 ## 相关
-- [skills/ai/agent.md](../../../skills/ai/agent.md)
-- [skills/ai/tool-calling.md](../../../skills/ai/tool-calling.md)
+- [skills/ai/agent.md](../../../skills/ai/agent/SKILL.md)
+- [skills/ai/tool-calling.md](../../../skills/ai/tool-calling/SKILL.md)

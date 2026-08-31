@@ -26,4 +26,4 @@
 - 完整示例：[examples/](./examples/README.md)
 - 上游技能：[../requirement-analysis/SKILL.md](../requirement-analysis/SKILL.md)
 - 下游技能：[../architecture-design/SKILL.md](../architecture-design/SKILL.md)
-- 配套 Prompt 模板：[../../../../prompts/option-compare.md](../../../../prompts/option-compare.md)
+- 配套 Prompt 模板：[../../../prompts/architecture/analyze-requirement.md](../../../prompts/architecture/analyze-requirement.md)

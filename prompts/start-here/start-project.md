@@ -102,7 +102,7 @@
 - [requirement-analysis](../../skills/core/requirement-analysis/SKILL.md)
 
 ## Related Workflows
-- [start-project](../../workflows/start-project.md)
+- [start-project](../../workflows/start-project/README.md)
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题（Use When / Goal / Input Variables / Prompt / Expected Behavior / Expected Output / Common Mistakes / Related Skills / Related Workflows / Validation）

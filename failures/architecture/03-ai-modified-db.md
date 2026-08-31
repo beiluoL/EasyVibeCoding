@@ -47,5 +47,5 @@ AI 直接对生产库执行 `ALTER TABLE`，迁移中途失败，生产表结构
 
 ## Related Skill
 
-- 相关技能：[code-review](../../skills/code-review.md)
+- 相关技能：[code-review](../../skills/core/code-review/SKILL.md)
 - 相关反模式：[uncontrolled-agent](../../anti-patterns/uncontrolled-agent.md)

@@ -6,11 +6,11 @@
 
 | # | 易错点 | 后果 | 对应 Anti-Pattern |
 | --- | --- | --- | --- |
-| 1 | API Key 写在前端 JS | 任何人 F12 偷走 key | [`../../../anti-patterns/hardcoded-api-key.md`](../../../anti-patterns/hardcoded-api-key.md) |
-| 2 | 一个 prompt 让 AI 把全站写完 | 失控、难排查、改一处崩多处 | [`../../../anti-patterns/ai-writes-too-much-at-once.md`](../../../anti-patterns/ai-writes-too-much-at-once.md) |
-| 3 | 不设请求超时 | LLM 卡住时页面无限转圈 | [`../../../anti-patterns/missing-timeout.md`](../../../anti-patterns/missing-timeout.md) |
-| 4 | 无错误兜底 | 断网/key 失效时白屏或卡死 | [`../../../anti-patterns/no-error-fallback.md`](../../../anti-patterns/no-error-fallback.md) |
-| 5 | 直接把回复 innerHTML | XSS：回复含 `<script>` 被执行 | [`../../../anti-patterns/unsafe-innerhtml.md`](../../../anti-patterns/unsafe-innerhtml.md) |
+| 1 | API Key 写在前端 JS | 任何人 F12 偷走 key | [`../../../anti-patterns/hardcoded-api-key.md`](../../../anti-patterns/secret-leak.md) |
+| 2 | 一个 prompt 让 AI 把全站写完 | 失控、难排查、改一处崩多处 | [`../../../anti-patterns/ai-writes-too-much-at-once.md`](../../../anti-patterns/giant-prompt.md) |
+| 3 | 不设请求超时 | LLM 卡住时页面无限转圈 | [`../../../anti-patterns/missing-timeout.md`](../../../anti-patterns/no-testing.md) |
+| 4 | 无错误兜底 | 断网/key 失效时白屏或卡死 | [`../../../anti-patterns/no-error-fallback.md`](../../../anti-patterns/no-testing.md) |
+| 5 | 直接把回复 innerHTML | XSS：回复含 `<script>` 被执行 | [`../../../anti-patterns/unsafe-innerhtml.md`](../../../anti-patterns/secret-leak.md) |
 
 ## 教训详解
 

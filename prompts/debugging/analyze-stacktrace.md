@@ -90,7 +90,7 @@ TypeError: Cannot read property 'name' of undefined——在拼接用户名时 u
 - [systematic-debugging](../../skills/core/systematic-debugging/SKILL.md)
 
 ## Related Workflows
-- [debugging](../../workflows/debugging.md)
+- [debugging](../../workflows/debugging/README.md)
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

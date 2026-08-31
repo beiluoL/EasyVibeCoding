@@ -75,7 +75,7 @@
 - [project-discovery](../../skills/core/project-discovery/SKILL.md)
 
 ## Related Workflows
-- 暂无独立 workflow，可作为 [start-project](../../workflows/start-project.md) 的前置步骤使用。
+- 暂无独立 workflow，可作为 [start-project](../../workflows/start-project/README.md) 的前置步骤使用。
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

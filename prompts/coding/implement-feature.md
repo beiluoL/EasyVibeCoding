@@ -92,7 +92,7 @@ router.post('/rent', async (req, res) => {
 - [implementation](../../skills/core/implementation/SKILL.md)
 
 ## Related Workflows
-- [feature-development](../../workflows/feature-development.md)
+- [feature-development](../../workflows/feature-development/README.md)
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

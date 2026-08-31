@@ -44,5 +44,5 @@ AI 没写测试、没跑测试，口头报告「完成」。边界条件 `>=` �
 
 ## Related Skill
 
-- 相关技能：[verification-before-completion](../../skills/verification-before-completion.md)、[testing](../../skills/testing.md)
+- 相关技能：[verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)、[testing](../../skills/core/testing/SKILL.md)
 - 相关反模式：[no-testing](../../anti-patterns/no-testing.md)

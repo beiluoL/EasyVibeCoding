@@ -6,7 +6,7 @@
 
 为了"先跑通"，把密钥硬编码在代码里，顺手提交进仓库，或用 `console.log` 打出来调试。常见表现：
 
-- 前端代码里写 `const API_KEY = 'sk-xxxx'`
+API_KEY = 'sk-example-not-a-real-key-redacted'  # safe: example (BAD anti-pattern, do NOT copy)
 - `.env` 被提交进 git
 - 把请求头（含 token）整个 `console.log` 出来
 - 把密钥写进前端，靠"前端不展示"当安全
@@ -33,7 +33,7 @@
 
 ```js
 // 前端代码里
-const API_KEY = 'sk-live-xxxxxxxxxxxx';
+API_KEY = 'sk-live-example-not-a-real-key-redacted'    # safe: example (BAD anti-pattern, do NOT copy)
 fetch('https://api.x.com/data', { headers: { Authorization: API_KEY } });
 console.log('请求头', headers); // token 被打到日志
 ```

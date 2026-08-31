@@ -49,5 +49,5 @@ AI 在症状层面反复打补丁：加判空、吞异常、放宽前端容错�
 
 ## Related Skill
 
-- 相关技能：[systematic-debugging](../../skills/systematic-debugging.md)
+- 相关技能：[systematic-debugging](../../skills/core/systematic-debugging/SKILL.md)
 - 相关反模式：[endless-debug-loop](../../anti-patterns/endless-debug-loop.md)

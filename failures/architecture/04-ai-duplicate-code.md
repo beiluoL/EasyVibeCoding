@@ -42,5 +42,5 @@ AI 在组件内新写了一段日期格式化逻辑，与现有 `formatDate` 功
 
 ## Related Skill
 
-- 相关技能：[implementation](../../skills/implementation.md)
+- 相关技能：[implementation](../../skills/core/implementation/SKILL.md)
 - 相关反模式：[architecture-by-guessing](../../anti-patterns/architecture-by-guessing.md)
