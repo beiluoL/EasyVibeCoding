@@ -2,11 +2,48 @@
 
 > Translations welcome! 欢迎贡献翻译！翻訳歓迎！번역을 환영합니다!
 
-EasyVibeCoding 的国际化方案参考主流开源项目（如 Vue / Vite / Element Plus / Mermaid 等）：**在仓库根下放多份 `README.<LANG>.md`，并在每份 README 顶部放置统一的语言切换横幅**。
+EasyVibeCoding 的国际化方案参考主流开源项目（如 Vue / Vite / Element Plus / Mermaid 等）：**在仓库根下放多份 `README.<LANG>.md`，并在每份 README 顶部放置统一格式的语言切换横幅**。
 
+### 横幅规则
+
+- 横幅用 `<div align="right">` 包裹，放在 README **最顶端第一行**（在 `# 标题` 之前）。
+- 每份 README 的横幅**结构相同，但高亮项不同**：当前语言用 `<strong>` 加粗（无链接），其它语言用 `<a href="README.<lang>.md">` 链接。
+- 语言项之间用 ` · `（空格·空格）分隔。
+- 顺序固定：`🌏 English · 🇨🇳 简体中文 · 🇹🇼 繁體中文 · …新增语言`。
+
+### 通用模板（伪代码）
+
+```html
+<div align="right">
+  <a href="README.en.md">🌏 English</a> · <a href="README.md">🇨🇳 简体中文</a> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
+</div>
 ```
+
+> 把**当前语言**那一项的 `<a href="...">...</a>` 替换为 `<strong>...</strong>` 即可。
+
+### 三份实际横幅对照
+
+**README.md（简体中文，默认）** —— 简体中文加粗：
+
+```html
+<div align="right">
+  <a href="README.en.md">🌏 English</a> · <strong>🇨🇳 简体中文</strong> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
+</div>
+```
+
+**README.en.md（English）** —— English 加粗：
+
+```html
 <div align="right">
   <strong>🌏 English</strong> · <a href="README.md">🇨🇳 简体中文</a> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
+</div>
+```
+
+**README.zh-TW.md（繁體中文）** —— 繁體中文 加粗：
+
+```html
+<div align="right">
+  <a href="README.en.md">🌏 English</a> · <a href="README.md">🇨🇳 简体中文</a> · <strong>🇹🇼 繁體中文</strong>
 </div>
 ```
 
@@ -39,13 +76,15 @@ EasyVibeCoding 的国际化方案参考主流开源项目（如 Vue / Vite / Ele
 
 ---
 
-## 新增一个语言的翻译（5 步搞定）
+## 新增一个语言的翻译（4 步搞定）
 
 1. **复制**当前最新的默认 `README.md`（简体中文，通常也是最领先的版本）到 `README.<lang>.md`。
-2. **替换顶部横幅**（语言栏顺序：English · 简体中文 · 繁體中文 · …你的新语言），并把你的语言项改成 `<strong>` + emoji 高亮。
+2. **替换顶部横幅**——按上方「横幅规则」操作：
+   - 把新语言项追加到横幅末尾（如 `· <a href="README.ja.md">🇯🇵 日本語</a>`）。
+   - 把**当前语言**那一项从 `<a href="...">...</a>` 改成 `<strong>...</strong>`（加粗、无链接）。
+   - 同时**交叉更新**其它已存在的 README 横幅，把新语言以 `<a>` 链接形式追加到末尾。
 3. **正文翻译**。推荐逐段落翻译，保持原段落顺序、标题层级和链接目标不变；Mermaid 图中的标签建议也翻译。
-4. **交叉更新**其它已存在的 README 语言文件顶部横幅，把新语言加到横幅里。
-5. **跑校验 + 提交 PR**：
+4. **跑校验 + 提交 PR**：
    ```bash
    # 1) 检查翻译中使用的所有相对链接是否仍存在
    python3 scripts/check-links.py .
@@ -93,6 +132,9 @@ python3 scripts/check-links.py .
 ## 翻译验收清单（开 PR 前请勾选）
 
 - [ ] 顶部语言切换横幅已正确互链（所有语言文件都出现了新语言的入口）
+- [ ] 横幅格式正确：`<div align="right">` 包裹，放在 README 第一行（`#` 标题之前）
+- [ ] 当前语言项用 `<strong>` 加粗（无 `<a>` 链接），其它语言项用 `<a href="README.<lang>.md">` 链接
+- [ ] 横幅语言顺序与其它 README 一致（`🌏 English · 🇨🇳 简体中文 · 🇹🇼 繁體中文 · …`）
 - [ ] 默认 README.md 的主要章节（项目介绍 / 导航 / 为什么用 / 给谁用 / 快速开始 / 用户旅程 / 两幅 Mermaid / 核心目录 / 学习路径 / 诚实规则 / 贡献 / 路线图 / 7 条原则 / License）翻译中未缺漏
 - [ ] 所有**相对链接**仍指向真实文件（未改 `docs/...` / `skills/...` / `prompts/...` / `cases/...` 等路径）
 - [ ] Mermaid 语法未被破坏（两份翻译的 Mermaid 图可以用 Mermaid Live Editor 或 IDE Mermaid 预览自查）

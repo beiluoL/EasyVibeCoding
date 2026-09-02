@@ -109,16 +109,9 @@ EasyVibeCoding/
 
 - 默认首页永远是简体中文的 `README.md`（GitHub 默认读取它）。
 - 其它语言使用独立文件：`README.<lang>.md`（如 `README.en.md` / `README.zh-TW.md`），**不要**创建 `zh/` 或 `en/` 子目录放 README。
-- 每份 README 顶部必须放**统一格式的语言切换横幅**（见下）。当前语言项用 `<strong>` 加粗，其它语言用 `<a href="README.<lang>.md">` 链接。
+- 每份 README 顶部必须放**统一格式的语言切换横幅**：`<div align="right">` 包裹，放在 README 第一行（`#` 标题之前）；当前语言项用 `<strong>` 加粗（无链接），其它语言用 `<a href="README.<lang>.md">` 链接。完整规则与三份实际横幅对照见 [docs/i18n-contributing.md](docs/i18n-contributing.md) 的「横幅规则」节。
 - 修改默认 `README.md` 后，**优先同步更新** README.en.md / README.zh-TW.md，否则请在改动处留一段：
   `<!-- TODO(i18n): sync this new section to README.en.md and README.zh-TW.md -->`
-- 语言切换横幅（简体中文示例；其它语言替换强高亮项与文案翻译即可）：
-
-```html
-<div align="right">
-  <a href="README.en.md">🌏 English</a> · <strong>🇨🇳 简体中文</strong> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
-</div>
-```
 
 - 翻译诚实标记必须保留：`⚠️ Not Yet Verified` / `Status: experimental` / `Planned`——**严禁因为翻译把“未验证”译成“已验证”**。
 - 社区翻译请在横幅下方追加一行：
