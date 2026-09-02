@@ -11,6 +11,12 @@
 - 不交代命名约定、错误处理约定
 - 每次对话都从零让 AI 猜
 
+## Why It Looks Reasonable
+
+- "需求很简单，就一个接口，不需要交代整个项目背景"——感觉过度准备。
+- 以为 AI 能从代码片段推断出项目约定（框架、版本、风格）。
+- 短对话里碰巧 AI 猜对了，让人误以为每次都能猜对。
+
 ## Why It Fails
 
 - **AI 靠猜**：不知道项目用 Express 还是 Koa、用 CommonJS 还是 ESM、用不用 ORM，只能按最常见的写法生成，跟你项目对不上。
@@ -46,6 +52,12 @@ AI 用 Express + mongoose 写，你项目其实是 Koa + Prisma，命名风格�
 ```
 
 AI 先汇报"你用 Koa + Prisma，有 utils/validate.ts 和 utils/error.ts"，再按约定写，产出直接能并进项目。
+
+## Prevention
+
+- 每次新对话先贴项目上下文（技术栈、目录结构、约定），或用 [understand-project](../prompts/start-here/understand-project.md) 让 AI 先读。
+- 把项目约定写进 `AGENTS.md`，AI 每次自动读取，不用手动重复。
+- 检查 AI 产出是否符合项目已有风格（命名、依赖、分层），不符合就退回重做。
 
 ## Related Skill
 

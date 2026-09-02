@@ -9,15 +9,29 @@
 给 Agent 一句"把这个项目做完，需要什么工具自己调用"，不设上限、不设终止、不给白名单。常见表现：
 
 - 开放所有工具（删文件、发版、改数据库）不限范围
+
 - 不设最大循环次数 / 最大时长
+
 - 高危操作不要求人工确认
+
 - 让 Agent "一直跑到做完为止"
+
+## Why It Looks Reasonable
+
+- "Agent 就是要自主，限制太多就失去意义"——感觉设边界等于削弱能力。
+
+- "给它全部权限，省得中途要人工干预"——感觉更高效。
+
+- 如果碰巧 Agent 在安全范围内完成了任务，会让人误以为每次都能控住。
 
 ## Why It Fails
 
 - **死循环**：Agent 卡在某个子目标反复尝试，没有终止条件就无限烧 token、无限改代码，越改越乱。
+
 - **误操作**：Agent "自信"地删了不该删的文件、改了生产配置、发了不该发的版，造成不可逆后果。
+
 - **不可控**：开放工具范围后，Agent 可能调用你没预期的工具（扫全盘、读密钥、发外部请求）。
+
 - **违反原则 05** Human owns decisions——关键决策人来拍板。Agent 不能自作主张做高风险动作。
 
 Agent 的"自主性"是双刃剑：有边界才高效，无边界就是定时炸弹。
@@ -55,9 +69,21 @@ Agent 卡在部署步骤反复重试 200 次，中途删错了配置文件，把
 
 Agent 在边界内自主跑，出界就停下问你。
 
+## Prevention
+
+- 设最大循环次数（如 10 次）和超时（如 5 分钟），到顶必须停。
+
+- 高危操作（删文件、发版、改数据库）走人工确认白名单，Agent 不能自作主张。
+
+- 每步可观测：Agent 报告在做什么、调用了什么工具，你能随时叫停。
+
 ## Related Skill
 
 - [agent](../skills/ai/agent/SKILL.md) —— 受控地让 Agent 自主执行
+
 - [tool-calling](../skills/ai/tool-calling/SKILL.md) —— 给 AI 工具的白名单与约束
+
 - 失败案例：[agent-infinite-loop](../failures/ai/08-agent-infinite-loop.md)、[tool-overscope](../failures/ai/09-tool-overscope.md)
+
 - 原则 05 Human owns decisions：项目根 `README.md`
+

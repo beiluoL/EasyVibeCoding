@@ -3,14 +3,14 @@ version: "0.1.0"
 skills:
   - id: project-discovery
     name: 项目发现
-    description: 快速识别项目类型、技术栈与结构，为后续工作建立上下文。
+    description: 在动手写代码前把用户模糊想法变成清晰项目定义，或在进入陌生项目时系统地理解项目结构。
     category: core
     difficulty: beginner
     status: experimental
     verified: false
     compatible: [unspecified]
     path: skills/core/project-discovery/SKILL.md
-    version: 0.1.0
+    version: 1.0.0
   - id: requirement-analysis
     name: 需求分析
     description: 将模糊需求拆解为清晰、可验证的功能点与验收标准。
@@ -43,14 +43,14 @@ skills:
     version: 0.1.0
   - id: task-planning
     name: 任务规划
-    description: 将需求拆分为有序、可执行的开发任务清单。
+    description: 把需求拆成小步、可独立验证的任务清单——从Epic到Subtask四级分解，每步范围受控。
     category: core
     difficulty: beginner
     status: experimental
     verified: false
     compatible: [unspecified]
     path: skills/core/task-planning/SKILL.md
-    version: 0.1.0
+    version: 1.0.0
   - id: implementation
     name: 代码实现
     description: 按计划编写高质量、符合规范的代码并保持简洁。
@@ -63,14 +63,14 @@ skills:
     version: 0.1.0
   - id: systematic-debugging
     name: 系统化调试
-    description: 通过假设—验证循环定位根因并高效修复缺陷。
+    description: 不靠猜地定位Bug：观察→复现→收集证据→定位→假设→验证→修复→回归测试，配合DebuggingDecisionTree。
     category: core
     difficulty: intermediate
     status: experimental
     verified: false
     compatible: [unspecified]
     path: skills/core/systematic-debugging/SKILL.md
-    version: 0.1.0
+    version: 1.0.0
   - id: testing
     name: 测试
     description: 编写单元、集成与端到端测试保障功能正确性与回归稳定。
@@ -93,14 +93,14 @@ skills:
     version: 0.1.0
   - id: verification-before-completion
     name: 完成前验证
-    description: 在交付前系统性核对功能、质量与验收标准是否满足。
+    description: Claim→Evidence→Verification→Conclusion——按验收标准逐条核对，AI说完成不等于完成。
     category: core
     difficulty: beginner
     status: experimental
     verified: false
     compatible: [unspecified]
     path: skills/core/verification-before-completion/SKILL.md
-    version: 0.1.0
+    version: 1.0.0
   - id: rag
     name: 检索增强生成
     description: 通过文档分块、检索与上下文拼接增强大模型的回答能力。

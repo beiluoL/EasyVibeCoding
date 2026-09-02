@@ -20,6 +20,17 @@ AI 改了前端 `login.vue`，后端问题原封不动；前端原本正常的�
 
 上下文没给清项目结构与目标文件。开发者只描述了「症状」（401），没给「位置」（哪个文件、哪个函数）。AI 只能靠文件名和关键词猜，猜错就改错地方。
 
+## Symptom vs Root Cause
+
+| 维度 | Symptom（表象） | Root Cause（根因） |
+| --- | --- | --- |
+| 用户看到 | 登录返回 401 | — |
+| AI 改了 | 前端 login.vue 的错误处理 | — |
+| 实际问题 | — | 后端 JWT 校验 middleware 的 token 过期判断写反了 |
+| 为什么改错 | AI 靠关键词 "401" 搜索，命中前端文件 | 没有先走 Project Discovery 理解调用链 |
+
+> 教训：401 是表象，不是根因。AI 如果先理解项目结构（User Controller → Auth Middleware → JWT），就不会改错文件。
+
 ## Why AI Failed
 
 - AI 靠文件名/关键词猜测目标，没有「先确认范围再动手」的约束。

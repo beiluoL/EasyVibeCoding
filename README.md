@@ -75,7 +75,7 @@ EasyVibeCoding 解决三件事：
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/easyvibecoding/EasyVibeCoding.git
+git clone https://github.com/beiluoL/EasyVibeCoding.git
 cd EasyVibeCoding
 
 # 2. 看第一篇入门（理解什么是 Vibe Coding）

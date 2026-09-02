@@ -6,16 +6,30 @@
 
 为了"先跑通"，把密钥硬编码在代码里，顺手提交进仓库，或用 `console.log` 打出来调试。常见表现：
 
-API_KEY = 'sk-example-not-a-real-key-redacted'  # safe: example (BAD anti-pattern, do NOT copy)
+API\_KEY = 'sk-example-not-a-real-key-redacted'  # safe: example (BAD anti-pattern, do NOT copy)
+
 - `.env` 被提交进 git
+
 - 把请求头（含 token）整个 `console.log` 出来
+
 - 把密钥写进前端，靠"前端不展示"当安全
+
+## Why It Looks Reasonable
+
+- "先跑通再说，后面再改安全"——感觉安全是后期的事。
+
+- "本地开发不怕泄露"——以为泄露只发生在生产环境。
+
+- 如果碰巧仓库是 private，会让人误以为提交密钥也没事（忘了仓库可能变 public、协作者能看到、CI 日志会留存）。
 
 ## Why It Fails
 
 - **前端即公开**：前端代码任何人都能在浏览器里看，密钥写前端 = 直接公开。
+
 - **git 是永久账本**：一旦提交，即使后面删掉，历史里还在，扒出来就能用。
+
 - **日志会流转**：日志会被收集、转发、留存，密钥打日志 = 在多个系统里留副本。
+
 - **泄露即事故**：密钥泄露意味着别人能冒用你的身份、刷你的额度、读你的数据，且常常不可逆。
 
 ## Better Approach
@@ -56,8 +70,19 @@ fetch('/api/proxy/data'); // 后端用 key 去请求第三方
 console.log('key:', API_KEY?.slice(0, 4) + '****');
 ```
 
+## Prevention
+
+- `.env` 加入 `.gitignore`，第一天就做，不是"后面再说"。
+
+- 密钥只放后端 `process.env`，前端永远拿不到原始 key。
+
+- 合入前跑 [security-review](../prompts/review/security-review.md)，检查有没有硬编码密钥或 `.env` 误提交。
+
 ## Related Skill
 
 - [code-review](../skills/core/code-review/SKILL.md) —— 合入前结构化评审（含安全项零遗漏）
+
 - [security-review](../prompts/review/security-review.md) —— 专门的安全评审清单
+
 - 失败案例：[api-key-leak](../failures/deployment/10-api-key-leak.md)
+

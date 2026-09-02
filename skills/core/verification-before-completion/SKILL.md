@@ -1,7 +1,7 @@
 ---
 name: verification-before-completion
 description: 完成判定——按验收标准逐条核对，未全部通过不宣告"完成"，避免 AI 自我说"做完了"。
-version: 0.1.0
+version: 1.0.0
 category: core
 difficulty: beginner
 status: experimental
@@ -100,6 +100,38 @@ AI 最常见的问题：自己说"已完成"，但实际有功能没测、有报
 遗留问题：<列出，无则写"无">
 完成判定：完成 / 未完成（待修复 N 条）
 ```
+
+## Claim → Evidence → Verification → Conclusion
+
+> 小白解释：AI 说"我做完了"叫 Claim（声明）。你得找 Evidence（证据）来 Verify（验证），最后才下 Conclusion（结论）。声明 ≠ 验证。
+
+```mermaid
+flowchart LR
+  C[Claim<br/>AI 说完成了] --> E[Evidence<br/>找证据]
+  E --> V[Verification<br/>逐条验证]
+  V --> Co[Conclusion<br/>下结论]
+  V -->|有未通过的| Fix[回 Implementation<br/>或 Debugging]
+  Fix --> E
+```
+
+### 多级验证示例
+
+AI 说："登录功能已经完成。"
+
+不能直接信。逐级验证：
+
+| 验证级别 | 验证什么 | 方法 | AI 声称通过？ | 实际 |
+| --- | --- | --- | --- | --- |
+| 代码存在 | 登录相关文件有实际代码 | `grep -r "login" src/` | — | ✅ 有 |
+| Build 成功 | 项目能编译 | `npm run build` | "能编译" | ✅ 通过 |
+| 测试通过 | 登录测试跑过 | `npm test -- --grep login` | "测试过了" | ✅ 3/3 通过 |
+| 接口能调用 | POST /api/login 能返回 | `curl -X POST /api/login` | "能调" | ✅ 返回 200 |
+| 错误场景正常 | 密码错返回 401 | `curl -X POST -d 'wrong'` | "做了" | ❌ 返回 500 |
+| 数据库正确 | 登录后写 session | 查 DB session 表 | — | ❌ 没写 |
+
+**结论**：登录功能 **未完成**（4/6 通过，2 项 ❌）。AI 说"完成了"是过度声明。
+
+> **核心原则**：AI 的"已完成"声明只是 Claim，不构成验证。只有客观证据才能下结论。
 
 ## Example
 

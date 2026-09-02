@@ -1,7 +1,7 @@
 ---
 name: project-discovery
-description: 在动手写代码前把用户模糊想法变成清晰可被 AI 理解的项目定义（一句话目标 + 边界 + 给谁用 + 为什么），避免一上来就陷入技术细节。
-version: 0.1.0
+description: 在动手写代码前把用户模糊想法变成清晰项目定义，或在进入陌生项目时系统地理解项目结构——避免一上来就陷入技术细节。
+version: 1.0.0
 category: core
 difficulty: beginner
 status: experimental
@@ -69,6 +69,107 @@ flowchart LR
     D --> E{用户确认?}
     E -->|否| C
     E -->|是| F[进入需求分析]
+```
+
+## Project Understanding（已有项目理解）
+
+> 小白解释：为什么 AI 不能一进入项目就直接写代码？因为 AI 不像人，它没有"直觉"。如果不先搞清楚项目用什么技术、入口在哪、哪些模块互相依赖，AI 改一个地方就会碰倒一片。
+
+当 AI 进入一个已有项目时，必须按以下 8 步系统理解：
+
+### 8 步理解流程
+
+```mermaid
+flowchart LR
+  S[Scan] --> M[Map]
+  M --> I[Identify]
+  I --> T[Trace]
+  T --> U[Understand]
+  U --> Su[Summarize]
+  Su --> V[Verify]
+```
+
+| 步骤 | 做什么 | 大白话 |
+| --- | --- | --- |
+| Scan | 扫描目录结构、配置文件、依赖 | 先看项目长什么样 |
+| Map | 画出模块关系图 | 谁调用谁，谁依赖谁 |
+| Identify | 找到入口点、核心模块 | 从哪里启动，哪些是骨架 |
+| Trace | 追踪一条核心调用链 | 跟一个请求从头走到尾 |
+| Understand | 理解业务逻辑和数据流 | 这个项目在做什么 |
+| Summarize | 写一份 Project Understanding | 把理解写下来 |
+| Verify | 让用户确认理解对不对 | 别理解歪了 |
+
+### 14 项检测清单
+
+AI 理解一个项目，至少要搞清楚这 14 项：
+
+| # | 检测项 | 要回答的问题 | 找不到怎么办 |
+| --- | --- | --- | --- |
+| 1 | Project Overview | 这个项目是做什么的？ | 读 README / package.json / pom.xml |
+| 2 | Tech Stack | 用了什么语言、框架、数据库？ | 查 package.json / requirements.txt / go.mod |
+| 3 | Directory Structure | 目录怎么组织的？各放什么？ | 看 ls / tree 输出 |
+| 4 | Entry Points | 程序从哪个文件启动？ | 找 main() / index.js / app.py |
+| 5 | Dependencies | 依赖了哪些库？版本？ | 查 lock 文件 / vendor 目录 |
+| 6 | Configuration | 配置怎么管？环境变量？ | 找 .env / config/ / settings |
+| 7 | Database | 用了什么数据库？表结构？ | 找 migration / schema / ORM 模型 |
+| 8 | API | 有哪些接口？路由怎么组织？ | 找 routes/ / controllers/ / openapi.yaml |
+| 9 | Business Modules | 核心业务模块有哪些？ | 看 src/ 或 app/ 下的目录划分 |
+| 10 | Tests | 测试在哪？怎么跑？ | 找 test/ / spec/ / __tests__/ |
+| 11 | Build / Run | 怎么构建？怎么运行？ | 找 Makefile / package.json scripts / Dockerfile |
+| 12 | External Services | 用了哪些第三方服务？ | 查 env 变量、SDK 引用 |
+| 13 | Important Constraints | 有哪些必须遵守的约定？ | 读 AGENTS.md / CONTRIBUTING.md / .editorconfig |
+| 14 | Potential Risks | 哪里最容易出问题？ | 看技术债、TODO/FIXME 注释、复杂度高 |
+
+### Bad vs Good
+
+**❌ Bad：直接改用户指定的文件**
+
+```
+用户：登录有问题，帮我改 UserController
+AI：好的，直接改了 UserController。
+→ 实际问题在 AuthenticationService
+→ 改了正确的文件但没改对地方
+→ 还把 UserController 里不相关的逻辑碰坏了
+```
+
+**✅ Good：先理解项目结构和调用链**
+
+```
+用户：登录有问题，帮我改 UserController
+AI：我先理解一下项目结构。
+→ Scan: 扫目录，发现 auth/ 模块
+→ Map: UserController 调用 AuthenticationService
+→ Identify: 入口是 UserController.login()，核心是 AuthenticationService.verify()
+→ Trace: 跟 login() → verify() → DB 查询的调用链
+→ 理解了：问题可能在 AuthenticationService 的密码比对逻辑
+→ 再动手改，改对地方，不碰无关代码
+```
+
+### Output Format
+
+```
+# Project Understanding：<项目名>
+
+## Tech Stack
+- 语言：<>
+- 框架：<>
+- 数据库：<>
+
+## Entry Points
+- 启动文件：<>
+- 启动命令：<>
+
+## Module Map
+<简要模块关系图>
+
+## Core Flow
+<一条核心调用链的描述>
+
+## Constraints
+<项目约定、风格、禁止事项>
+
+## Risks
+<技术债、易出错的地方>
 ```
 
 ## Rules（规则）

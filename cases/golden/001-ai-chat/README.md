@@ -1,4 +1,4 @@
-# Golden Case 001 — AI 聊天应用
+# Golden Case 001 — AI 聊天应用 · EasyVibeCoding Reference Case
 
 > ⚠️ Verification Pending — 本案例尚未实际运行验证。内容已就位，但不代表已跑通。
 
@@ -100,3 +100,20 @@ flowchart LR
 ## Lessons Learned（经验总结）
 
 详见 [lessons.md](lessons.md)。核心：key 别碰前端、AI 一次别写太多、必须有超时与错误兜底。
+
+## Reference Case Highlights（参考案例要点）
+
+> 本案例是 EasyVibeCoding 的 Reference Case——展示"AI 应该如何工作"的完整流程。
+
+| 步骤 | 用了哪个 Skill | 用了哪个 Prompt | 展示了什么 |
+| --- | --- | --- | --- |
+| Idea | brainstorming | start-project | 从一句话想法到项目目标 |
+| Requirement | requirement-analysis | analyze-requirement | 把模糊想法变成验收标准 |
+| Architecture | architecture-design | design-architecture | 前端 + 后端代理 + LLM 三层 |
+| Implementation | implementation | implement-feature | 5 步小步实现 |
+| Debug | systematic-debugging | debug-error | 排查"回复不显示"的根因 |
+| Testing | testing | write-tests | 给后端接口配测试 |
+| Review | code-review | security-review | 检查 API Key 是否泄露 |
+| Verification | verification-before-completion | verify-feature | 逐条验收，证据说话 |
+
+> 重点不是最终代码，而是：为什么这么拆、为什么这个 Prompt 有效、AI 哪里出错、如何纠正、如何验证。

@@ -31,6 +31,16 @@ prompts:
     compatible: [unspecified]
     path: prompts/start-here/ask-ai-correctly.md
     version: 0.1.0
+  - id: build-feature
+    name: 万能开发Prompt
+    description: 让AI按Understand→Inspect→Plan→Implement→Test→Review→Verify7步安全完成功能，每步有HardGate。
+    category: start-here
+    difficulty: beginner
+    status: experimental
+    verified: false
+    compatible: [unspecified]
+    path: prompts/start-here/build-feature.md
+    version: 0.1.0
   - id: analyze-requirement
     name: 分析需求
     description: 将业务需求拆解为功能点、边界条件与验收标准。

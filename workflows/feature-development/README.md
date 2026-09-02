@@ -23,7 +23,8 @@
 ```mermaid
 flowchart LR
     A[Trigger<br/>现有项目需要新功能/变更] --> B[Requirement Analysis<br/>需求分析]
-    B --> C[Task Planning<br/>任务拆解]
+    B --> PD[Project Discovery<br/>理解现有项目]
+    PD --> C[Task Planning<br/>任务拆解]
     C --> D[Implementation<br/>小步实现]
     D --> E[Testing<br/>测试验证]
     E --> F[Code Review<br/>代码评审]
@@ -155,6 +156,30 @@ flowchart LR
 6. ✅ 完工前核查 100% 打勾，未验证项 ≤ 0
 
 ---
+
+## When to Pause · 何时暂停 / 人工确认
+
+| 检查点 | 原因 | 谁来拍板 |
+| --- | --- | --- |
+| 验收标准写完后（Step 1 结束） | "做到什么算完成"决定方向，AI 写的验收点可能遗漏边界 | 人确认验收标准 |
+| 实现完成后、进入 Review 前 | 代码刚写完，可能有隐藏问题，AI 不会自己质疑 | 人做 Code Review |
+| Review 发现架构级问题 | 超出本功能范围，需要改架构，继续做只会错上加错 | 人决定是暂停还是继续 |
+
+> 💡 原则 05 Human owns decisions——验收标准和 Review 结论必须由人确认，AI 不能自己拍板说"做完了"。
+
+## Human Approval Gates · 人工审批门
+
+> 哪些操作可以让 AI 自动完成，哪些必须人确认。
+
+| Gate | 位置 | AI 可以自动做 | 必须人确认 |
+| --- | --- | --- | --- |
+| Gate 1 | 需求分析后 | 分析需求、列验收点 | MVP 范围、需求优先级 |
+| Gate 2 | 项目理解后 | 扫描目录、读配置 | 哪些模块可以改、哪些不能动 |
+| Gate 3 | 任务拆解后 | 拆子任务、排依赖 | 任务顺序、是否可以并行 |
+| Gate 4 | 实现过程中 | 写代码、跑构建 | 架构级变更、跨模块改动 |
+| Gate 5 | Code Review 后 | 修 lint 问题、补注释 | 合入主分支、发布 |
+
+> 原则：AI 写代码和跑测试可以自动，但"这个功能做完了可以合入"必须人拍板。
 
 ## Common Deviations · 常见偏离
 

@@ -30,6 +30,7 @@
 | analyze-requirement | analyze-requirement | - | - | - | false | prompts/architecture/analyze-requirement.md |
 | analyze-stacktrace | analyze-stacktrace | - | - | - | false | prompts/debugging/analyze-stacktrace.md |
 | ask-ai-correctly | ask-ai-correctly | - | - | - | false | prompts/start-here/ask-ai-correctly.md |
+| build-feature | build-feature · 万能开发 Prompt | - | - | experimental | false | prompts/start-here/build-feature.md |
 | debug-error | debug-error | - | - | - | false | prompts/debugging/debug-error.md |
 | design-architecture | design-architecture | - | - | - | false | prompts/architecture/design-architecture.md |
 | explain-code | explain-code | - | - | - | false | prompts/coding/explain-code.md |
@@ -57,7 +58,7 @@
 |---|---|---|---|---|---|---|
 | 003-ai-agent | 003 - 能自主调用工具完成任务的 AI Agent | golden | - | - | false | cases/golden/003-ai-agent/README.md |
 | 004-ai-learning-assistant | 004 - 个性化 AI 学习助手 | golden | - | - | false | cases/golden/004-ai-learning-assistant/README.md |
-| 001-ai-chat | Golden Case 001 — AI 聊天应用 | golden | - | - | false | cases/golden/001-ai-chat/README.md |
+| 001-ai-chat | Golden Case 001 — AI 聊天应用 · EasyVibeCoding Reference Case | golden | - | - | false | cases/golden/001-ai-chat/README.md |
 | 002-rag-app | Golden Case 002 — RAG 问答应用 | golden | - | - | false | cases/golden/002-rag-app/README.md |
 | 005-ai-saas | Golden Case 005 — 多租户 AI SaaS 平台 MVP | golden | - | - | false | cases/golden/005-ai-saas/README.md |
 
