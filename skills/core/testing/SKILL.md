@@ -1,12 +1,12 @@
 ---
 name: testing
 description: 为功能写"最小可验证的测试"，让"做完"有客观标准，而不是靠人感觉。
-version: 0.1.0
+version: 1.0.0
 category: core
 difficulty: intermediate
 status: experimental
 verified: false
-compatible: [unspecified]
+compatible: [codex, claude-code, cursor]
 prerequisites:
   - 功能的验收标准已定义
   - 项目已配置测试框架
@@ -37,11 +37,24 @@ last_verified: null
 
 没有测试时，"做完"全靠人感觉——感觉对就是做完了。有测试后，测试跑过才算完，跑不过就是没完。
 
+## What Problem Does It Solve?
+
+让 AI 不只是写完代码，而是证明代码能工作。
+
 ## When to Use
 
 - 实现完一个功能，需要确认它真的能用。
 - 修复一个 Bug 后，需要回归测试防止再犯。
 - 需要给 verification-before-completion 提供客观证据。
+
+## When Not to Use
+
+- 纯探索性 prototype
+- 一次性脚本
+
+## Beginner Explanation
+
+测试就是"盖完房子验水通电"——写完代码跑一遍证明它真的能用，而不是"我觉得能跑"。
 
 ## Trigger Conditions
 
@@ -162,3 +175,32 @@ test('超长标题返回 400', async () => {
 ```
 
 三条测试全绿，"创建笔记"这个功能才算有了客观的"做完"证据。
+
+## Inputs
+
+- 代码
+- 功能描述
+- 验收标准
+
+## Outputs
+
+- 测试文件
+- 测试结果（通过/失败数）
+- 覆盖率
+
+## Human Checkpoints
+
+- 测试策略选择（单元/集成/E2E）由人确认
+
+## Related Prompts
+
+- [write-tests](../../../prompts/testing/write-tests.md)
+- [verify-feature](../../../prompts/testing/verify-feature.md)
+
+## Related Workflows
+
+- [Feature Development](../../../workflows/feature-development/README.md)
+
+## Related Cases
+
+- [AI Chat](../../../cases/golden/001-ai-chat/README.md)

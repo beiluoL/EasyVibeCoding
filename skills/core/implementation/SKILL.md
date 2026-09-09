@@ -1,12 +1,12 @@
 ---
 name: implementation
 description: 按"小步、可验证、复用既有模式"的方式，让 AI 写出能真正运行的代码。
-version: 0.1.0
+version: 1.0.0
 category: core
 difficulty: beginner
 status: experimental
 verified: false
-compatible: [unspecified]
+compatible: [codex, claude-code, cursor]
 prerequisites:
   - task-planning 技能产出的任务清单（拆好的单步任务）
   - 项目结构已知，相关文件路径明确
@@ -38,11 +38,25 @@ last_verified: null
 
 核心思想：小步走、每步可验证、优先复用项目里已经有的东西，不要让 AI 一次铺太大。
 
+## What Problem Does It Solve?
+
+AI 根据现有项目模式进行最小、可控的代码修改，避免一次性改太多。
+
 ## When to Use
 
 - 已经用 task-planning 把功能拆成了单步任务，现在要动手写某一步。
 - AI 要写一段新功能代码时。
 - 拿到一个需求，需要把它落地成可运行代码时。
+
+## When Not to Use
+
+- 需求不清时
+- 架构未定时
+- 纯探索性 spike
+
+## Beginner Explanation
+
+实现就是"照着图纸砌砖"——先看别人怎么砌的，照样砌，别自创花样。
 
 ## Trigger Conditions
 
@@ -143,3 +157,36 @@ router.post('/', async (req, res) => {
 ```
 
 跑起来验证：发一个 POST 请求，确认返回 201；再发一个空 title，确认返回 400。两条验收点都 ✅，进入下一步。
+
+## Inputs
+
+- Task 描述
+- 现有代码
+- 项目规范
+- 依赖列表
+
+## Outputs
+
+- 代码变更（diff）
+- 变更说明
+- 验证结果
+
+## Human Checkpoints
+
+- 引入新依赖时
+- 修改公共接口时
+- 涉及安全相关代码时
+
+## Related Prompts
+
+- [implement-feature](../../../prompts/coding/implement-feature.md)
+- [refactor-code](../../../prompts/coding/refactor-code.md)
+
+## Related Workflows
+
+- [Feature Development](../../../workflows/feature-development/README.md)
+- [Start Project](../../../workflows/start-project/README.md)
+
+## Related Cases
+
+- [AI Chat](../../../cases/golden/001-ai-chat/README.md)

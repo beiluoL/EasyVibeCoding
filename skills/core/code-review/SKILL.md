@@ -1,12 +1,12 @@
 ---
 name: code-review
 description: 用结构化清单评审 AI 生成的代码：正确性/安全/可维护/可读，而不是"看起来没问题"。
-version: 0.1.0
+version: 1.0.0
 category: core
 difficulty: intermediate
 status: experimental
 verified: false
-compatible: [unspecified]
+compatible: [codex, claude-code, cursor]
 prerequisites:
   - 待评审的代码已实现完成
   - 验收标准已知
@@ -36,11 +36,24 @@ last_verified: null
 
 AI 写的代码看起来通顺，但常藏隐患：拼 SQL、硬编码密钥、没处理错误。不逐项过就会漏。
 
+## What Problem Does It Solve?
+
+AI 完成功能后用第二个视角检查代码质量、安全、一致性。
+
 ## When to Use
 
 - AI 生成了一段代码，准备用它之前。
 - 功能实现完成，准备合并到主分支前。
 - 对代码安全性不确定，需要系统检查。
+
+## When Not to Use
+
+- 改动只有 1-2 行注释时
+- 探索性 prototype 未定型时
+
+## Beginner Explanation
+
+Code Review 就是"装修完请个监理来挑毛病"——自己写自己看总有盲区，换个人/换个视角再查一遍。
 
 ## Trigger Conditions
 
@@ -170,3 +183,31 @@ router.post('/api/notes', async (req, res) => {
 
 结论：2 个 blocker 待修，不放行。修完 SQL 注入和错误处理后再评审。
 ```
+
+## Inputs
+
+- 代码变更（diff）
+- 功能需求
+- 项目规范
+
+## Outputs
+
+- Review 报告（PASS / CHANGES_REQUIRED + 问题列表）
+
+## Human Checkpoints
+
+- Review 结论为 CHANGES_REQUIRED 时，修复方案由人确认
+
+## Related Prompts
+
+- [security-review](../../../prompts/review/security-review.md)
+- [code-review](../../../prompts/review/code-review.md)
+
+## Related Workflows
+
+- [Feature Development](../../../workflows/feature-development/README.md)
+- [Refactoring](../../../workflows/refactoring/README.md)
+
+## Related Cases
+
+- [AI Chat](../../../cases/golden/001-ai-chat/README.md)
