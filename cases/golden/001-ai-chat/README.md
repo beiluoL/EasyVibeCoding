@@ -55,9 +55,27 @@ flowchart LR
 
 ## Workflow（工作流）
 
+这就是 EasyVibeCoding 推荐的基本开发闭环：
+
+```mermaid
+flowchart TD
+    A[Idea] --> B[Requirement]
+    B --> C[Project Discovery]
+    C --> D[Architecture]
+    D --> E[Task Planning]
+    E --> F[Implementation]
+    F --> G[Testing]
+    G --> H[Code Review]
+    H --> I[Verification]
+    I --> J[Release]
+    J --> K[Lessons Learned]
+```
+
 构建步骤（每步只做一件事，详见 [development-log.md](development-log.md)）：
 
-1. 项目骨架 → 2. 聊天 UI → 3. 后端接口 → 4. 渲染回复 → 5. 错误兜底
+1. 项目骨架 → 2. 聊天 UI → 3. 后端接口 → 4. 连接 LLM → 5. 渲染回复 → 6. 聊天状态 → 7. 错误兜底 → 8. 测试 → 9. Code Review → 10. Final Verification
+
+完整任务清单详见 [development-plan.md](development-plan.md)。
 
 对应的工作流：[`../../../workflows/feature-development/README.md`](../../../workflows/feature-development/README.md)
 
@@ -96,6 +114,40 @@ flowchart LR
 - 无多会话管理，清空即丢
 - ⚠️ 未做真实性能测试
 - ⚠️ 未部署到公网
+
+## Recommended Learning Path（推荐学习路径）
+
+第一次做 AI 项目？按这个顺序学：
+
+```text
+1. Project Discovery（先理解项目）
+   → 学 skill: project-discovery
+
+2. Requirement Analysis（分析需求）
+   → 学 skill: requirement-analysis
+
+3. Task Planning（拆任务）
+   → 学 skill: task-planning
+
+4. Implementation（小步实现）
+   → 学 skill: implementation
+
+5. 遇到问题？
+   → 学 skill: systematic-debugging
+
+6. 完成后？
+   → 学 skill: testing
+   → 学 skill: verification-before-completion
+```
+
+> 完整学习路线见 [Learning Path](../../../docs/learning-path/roadmap.md)。
+
+## Failure Analysis（失败分析）
+
+本 Case 记录了 2 个典型失败（Illustrative Example）：
+
+1. **AI 修改了错误的文件** — 不理解调用链就动手 → [failures.md Failure 01](failures.md)
+2. **AI Debug 进入循环** — 猜测式修改越改越乱 → [failures.md Failure 02](failures.md)
 
 ## Lessons Learned（经验总结）
 
