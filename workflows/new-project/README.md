@@ -228,9 +228,71 @@ flowchart LR
 
 ---
 
+## AI Responsibilities
+
+> AI 可以自主做的事情。
+
+- 读取代码、扫描目录理解项目上下文
+- 生成需求文档（FR + NFR + 验收条件）
+- 生成 ≥ 3 个架构方案并做对比表
+- 实现局部代码（按拆解的任务粒度）
+- 运行测试、跑 Code Review Checklist
+
+## Human Responsibilities
+
+> 必须由人确认的事情。
+
+- 确认需求范围（MVP 边界）
+- 确认技术选型（前端框架 / 后端语言 / 数据库 / 部署）
+- 确认架构方案（模块图 + 边界）
+- 确认发布范围（哪些进 v1，哪些留下次）
+
+## Stop Conditions
+
+> 什么时候必须停下来。
+
+- 需求不清时停（回 Step 1 补 Brief）
+- 技术选型有冲突时停（人拍板再继续）
+- 架构方案未经确认时停（不许直接进实现）
+
+## Output
+
+> 本流程的产出物。
+
+- Project Brief（项目简况）
+- 需求文档（FR + NFR + 验收条件）
+- 架构文档（模块图 + 选型理由）
+- 开发计划（任务清单 + 依赖）
+- 代码 + 测试 + 测试结果
+- Code Review 报告 + 完工核查清单
+
+## Related Skills
+
+- [project-discovery](../../skills/core/project-discovery/SKILL.md)
+- [requirement-analysis](../../skills/core/requirement-analysis/SKILL.md)
+- [brainstorming](../../skills/core/brainstorming/SKILL.md)
+- [architecture-design](../../skills/core/architecture-design/SKILL.md)
+- [task-planning](../../skills/core/task-planning/SKILL.md)
+- [implementation](../../skills/core/implementation/SKILL.md)
+- [testing](../../skills/core/testing/SKILL.md)
+- [code-review](../../skills/core/code-review/SKILL.md)
+- [verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)
+
+## Related Prompts
+
+- [start-project](../../prompts/start-here/start-project.md)
+- [analyze-requirement](../../prompts/architecture/analyze-requirement.md)
+- [design-architecture](../../prompts/architecture/design-architecture.md)
+- [write-development-plan](../../prompts/architecture/write-development-plan.md)
+- [implement-feature](../../prompts/coding/implement-feature.md)
+
+## Related Cases
+
+- [AI Chat](../../cases/golden/001-ai-chat/README.md)
+
 ## Related Workflows · 关联流程
 
 - 🔗 [**feature-development**](../feature-development/README.md) — 项目起来后加新功能，走它。
 - 🔗 [**release**](../release/README.md) — 做完想发布/上线，走它。
-- 🔗 [**debugging**](../debugging/README.md) — 跑起来有 bug，走它。
+- 🔗 [**bug-fix**](../bug-fix/README.md) — 跑起来有 bug，走它。
 - 🔗 [**refactoring**](../refactoring/README.md) — 代码写烂了想重写结构，走它。

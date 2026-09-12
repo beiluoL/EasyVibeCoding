@@ -16,7 +16,7 @@
 - 想**命名更清楚 / 注释更完整 / 删掉死代码**等纯结构改进
 - 看到"代码坏味道"（Code Smell）想整理
 
-> 💡 **红线**：重构 ≠ 加新功能 ≠ 修 Bug。行为不能变。想加功能走 [feature-development](../feature-development/README.md)，想修 Bug 走 [debugging](../debugging/README.md)。
+> 💡 **红线**：重构 ≠ 加新功能 ≠ 修 Bug。行为不能变。想加功能走 [feature-development](../feature-development/README.md)，想修 Bug 走 [bug-fix](../bug-fix/README.md)。
 
 ---
 
@@ -176,9 +176,64 @@ flowchart LR
 
 ---
 
+## AI Responsibilities
+
+> AI 可以自主做的事情。
+
+- 扫描代码坏味道（重复 / 长函数 / 命名 / 死代码）
+- 生成 ≥ 3 个重构方案并做对比表
+- 小步重构（每步独立可回退，行为不变）
+- 跑测试 + 跑 Code Review Checklist
+- 生成 Before / After 对照表
+
+## Human Responsibilities
+
+> 必须由人确认的事情。
+
+- 确认重构范围（哪些进本次、哪些留下次）
+- 确认重构方案（选哪条 + 不做什么）
+- 确认行为没变（测试前后结果一致 + 关键路径手测）
+- 合入前最终确认
+
+## Stop Conditions
+
+> 什么时候必须停下来。
+
+- 无测试保护时停（先补测试再重构）
+- 行为变了时停（回上一小步检查）
+- 一步改太多时停（回 Step 3 拆小步）
+
+## Output
+
+> 本流程的产出物。
+
+- 臭点清单（含严重度 + 范围）
+- 重构方案对比表（≥ 3 方案 + 选型理由）
+- Before / After 对比文档
+- 测试结果（重构前后一致）
+
+## Related Skills
+
+- [code-review](../../skills/core/code-review/SKILL.md)
+- [brainstorming](../../skills/core/brainstorming/SKILL.md)
+- [implementation](../../skills/core/implementation/SKILL.md)
+- [testing](../../skills/core/testing/SKILL.md)
+- [verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)
+
+## Related Prompts
+
+- [code-review](../../prompts/review/code-review.md)
+- [refactor-code](../../prompts/coding/refactor-code.md)
+- [write-tests](../../prompts/testing/write-tests.md)
+- [verify-feature](../../prompts/testing/verify-feature.md)
+
+## Related Cases
+
+- [AI Chat](../../cases/golden/001-ai-chat/README.md)
+
 ## Related Workflows · 关联流程
 
-- 🔗 [**debugging**](../debugging/README.md) — 代码烂导致 Bug 多，先 Debug 再 Refactor，或反过来。
+- 🔗 [**bug-fix**](../bug-fix/README.md) — 代码烂导致 Bug 多，先 Debug 再 Refactor，或反过来。
 - 🔗 [**feature-development**](../feature-development/README.md) — 做新功能时顺便想拆结构，先做完功能，再单独开重构。
 - 🔗 [**code-review skill**](../../skills/core/code-review/README.md) — Step 1 和 Step 5 都用它，核心技能。
 - 🔗 [**testing skill**](../../skills/core/testing/README.md) — 重构的安全网，没它别拆。

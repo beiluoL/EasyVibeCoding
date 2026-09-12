@@ -63,7 +63,7 @@ AI：先复现——什么操作会触发？
 - 禁止"先改了再说"——改之前必须有根因假设。
 - 设修改轮数上限（3 轮无进展就停，重新复现）。
 - 每轮改完必须跑回归测试，不只看原报错消失。
-- 使用 [debugging workflow](../workflows/debugging/README.md) 约束流程。
+- 使用 [debugging workflow](../workflows/bug-fix/README.md) 约束流程。
 
 ## Related Skill
 

@@ -185,7 +185,7 @@ router.post('/', async (req, res) => {
 ## Related Workflows
 
 - [Feature Development](../../../workflows/feature-development/README.md)
-- [Start Project](../../../workflows/start-project/README.md)
+- [Start Project](../../../workflows/new-project/README.md)
 
 ## Related Cases
 

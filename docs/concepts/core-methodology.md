@@ -49,7 +49,7 @@ flowchart LR
 
 | 步骤 | 大白话 | 对应 Skill | 对应 Prompt | 对应 Workflow |
 | --- | --- | --- | --- | --- |
-| 💡 Idea | 你想做什么 | [brainstorming](../../skills/core/brainstorming/SKILL.md) | [start-project](../../prompts/start-here/start-project.md) | [start-project](../../workflows/start-project/README.md) |
+| 💡 Idea | 你想做什么 | [brainstorming](../../skills/core/brainstorming/SKILL.md) | [start-project](../../prompts/start-here/start-project.md) | [start-project](../../workflows/new-project/README.md) |
 | 🔍 Understand | 先搞懂项目/需求 | [project-discovery](../../skills/core/project-discovery/SKILL.md) | [understand-project](../../prompts/start-here/understand-project.md) | start-project |
 | 🎨 Design | 定架构和技术栈 | [architecture-design](../../skills/core/architecture-design/SKILL.md) | [design-architecture](../../prompts/architecture/design-architecture.md) | start-project |
 | 🗂 Plan | 拆任务、定顺序 | [task-planning](../../skills/core/task-planning/SKILL.md) | [write-development-plan](../../prompts/architecture/write-development-plan.md) | start-project |
@@ -73,8 +73,8 @@ flowchart LR
 | Small tasks over giant prompts | Step 4 Plan 把大需求拆成小任务，Step 5 每次只做一个 |
 | Reuse before reinvent | Step 2-3 先查项目已有的工具/组件，不重新造 |
 | Evidence over claims | Step 8 Verify 要求客观证据，不听 AI 自吹 |
-| Human owns decisions | 每个 Workflow 的 [When to Pause](../../workflows/start-project/README.md#when-to-pause--何时暂停--人工确认) 章节定义了人工确认点 |
-| Every mistake becomes knowledge | 出错时走 [debugging workflow](../../workflows/debugging/README.md)，修完沉淀到 [failures](../../failures/) |
+| Human owns decisions | 每个 Workflow 的 [When to Pause](../../workflows/new-project/README.md#when-to-pause--何时暂停--人工确认) 章节定义了人工确认点 |
+| Every mistake becomes knowledge | 出错时走 [debugging workflow](../../workflows/bug-fix/README.md)，修完沉淀到 [failures](../../failures/) |
 | From Prompt to Production | 9 步从一句话想法走到可发布软件 |
 
 ---
@@ -145,5 +145,5 @@ flowchart LR
 - [Workflow 概念](./workflow.md)——Workflow 的定义与标准
 - [Prompt 概念](./prompt.md)——Prompt 的设计原则
 - [Giant Prompt 反模式](../../anti-patterns/giant-prompt.md)——为什么不推荐超级 Prompt
-- [Start Project Workflow](../../workflows/start-project/README.md)——第一个完整工作流
+- [Start Project Workflow](../../workflows/new-project/README.md)——第一个完整工作流
 - [Learning Path 学习路径](../learning-path/roadmap.md)——由浅入深的学习路线

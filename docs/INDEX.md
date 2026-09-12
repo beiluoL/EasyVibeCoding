@@ -27,6 +27,10 @@
 
 | id | name | category | difficulty | status | verified | path |
 |---|---|---|---|---|---|---|
+| fix-bug | Prompt — Bug 修复 | - | - | experimental | false | prompts/workflows/fix-bug.md |
+| build-feature | Prompt — 功能开发 | - | - | experimental | false | prompts/workflows/build-feature.md |
+| verify-task | Prompt — 完工验证 | - | - | experimental | false | prompts/verification/verify-task.md |
+| refactor | Prompt — 重构 | - | - | experimental | false | prompts/workflows/refactor.md |
 | analyze-requirement | analyze-requirement | - | - | - | false | prompts/architecture/analyze-requirement.md |
 | analyze-stacktrace | analyze-stacktrace | - | - | - | false | prompts/debugging/analyze-stacktrace.md |
 | ask-ai-correctly | ask-ai-correctly | - | - | - | false | prompts/start-here/ask-ai-correctly.md |
@@ -66,8 +70,9 @@
 
 | id | name | category | difficulty | status | verified | path |
 |---|---|---|---|---|---|---|
-| debugging | Debugging · 系统化排障 | - | - | - | false | workflows/debugging/README.md |
+| bug-fix | Debugging · 系统化排障 | - | - | - | false | workflows/bug-fix/README.md |
 | feature-development | Feature Development · 给现有项目加一个功能 | - | - | - | false | workflows/feature-development/README.md |
 | refactoring | Refactoring · 在不改变行为前提下改善结构 | - | - | - | false | workflows/refactoring/README.md |
 | release | Release · 发布前检查清单 + 回滚预案 | - | - | - | false | workflows/release/README.md |
-| start-project | Start Project · 启动一个新的项目 | - | - | - | false | workflows/start-project/README.md |
+| new-project | Start Project · 启动一个新的项目 | - | - | - | false | workflows/new-project/README.md |
+| testing | Testing · 测试流程 | - | - | - | false | workflows/testing/README.md |

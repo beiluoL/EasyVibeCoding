@@ -150,7 +150,7 @@ flowchart LR
 
 ## Related Workflows（相关工作流）
 
-- [Start Project](../../../workflows/start-project/README.md)
+- [Start Project](../../../workflows/new-project/README.md)
 - [Feature Development](../../../workflows/feature-development/README.md)
 
 ## Related Cases（相关案例）

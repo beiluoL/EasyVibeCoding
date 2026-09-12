@@ -76,7 +76,7 @@ flowchart LR
 - 扫一遍仓库：有没有 AK/SK / Token / Password / 私有 IP **硬编码**
 - 查输入校验：用户输入有没有长度 / 类型 / 格式校验（防注入）
 - 查权限 / 认证：管理员接口是不是谁都能调、敏感数据是否脱敏
-- 发现严重问题 → 走 [debugging](../debugging/README.md) 修完再继续
+- 发现严重问题 → 走 [bug-fix](../bug-fix/README.md) 修完再继续
 
 关联 Prompt：
 - [../../prompts/review/security-review.md](../../prompts/review/security-review.md)
@@ -168,11 +168,65 @@ API_KEY = "$YOUR_PROD_KEY"  <!-- safe: placeholder --> (must come from env var, 
 
 ---
 
+## AI Responsibilities
+
+> AI 可以自主做的事情。
+
+- 跑完工前核查清单 + 端到端 Demo
+- 扫代码（Code Review Checklist 整仓库过一遍）
+- 跑安全扫描（硬编码密钥 / 注入 / 权限）
+- 生成 Changelog 草稿 + 跑冒烟测试
+- 生成回滚命令草案
+
+## Human Responsibilities
+
+> 必须由人确认的事情。
+
+- 确认发布清单（每项有证据，不许走形式）
+- 确认 Staging 全绿（最后一道防线）
+- 最终签发发布（生产部署不可逆）
+- 回滚决策（出问题时谁拍板 + 何时回退）
+
+## Stop Conditions
+
+> 什么时候必须停下来。
+
+- Release Checklist 未全绿时停
+- Staging 有问题时停（不验证就上生产 = 赌）
+- 安全扫描有严重问题时停（必须修完再继续）
+
+## Output
+
+> 本流程的产出物。
+
+- Release Checklist（7 项 + 每项证据）
+- 安全审查报告
+- 部署包 + 版本号 Tag
+- 冒烟测试结果（Staging / Production）
+- 回滚方案 + 预发演练记录
+- Changelog（新增 / 修复 / 变更 / 废弃 / 已知问题）
+
+## Related Skills
+
+- [verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)
+- [code-review](../../skills/core/code-review/SKILL.md)
+- [testing](../../skills/core/testing/SKILL.md)
+
+## Related Prompts
+
+- [security-review](../../prompts/review/security-review.md)
+- [release-checklist](../../prompts/deployment/release-checklist.md)
+- [verify-feature](../../prompts/testing/verify-feature.md)
+
+## Related Cases
+
+- [AI Chat](../../cases/golden/001-ai-chat/README.md)
+
 ## Related Workflows · 关联流程
 
-- 🔗 [**start-project**](../start-project/README.md) — 新项目第一次上线，把 start-project 的收尾 + release 串起来用。
+- 🔗 [**new-project**](../new-project/README.md) — 新项目第一次上线，把 new-project 的收尾 + release 串起来用。
 - 🔗 [**feature-development**](../feature-development/README.md) — 加完功能准备发版，通常 feature-development → release 是一条线。
-- 🔗 [**debugging**](../debugging/README.md) — 发布前扫到问题，或者上线冒烟失败，先 Debug 修。
+- 🔗 [**bug-fix**](../bug-fix/README.md) — 发布前扫到问题，或者上线冒烟失败，先 Debug 修。
 - 🔗 [**refactoring**](../refactoring/README.md) — 大重构后想发布，风险极高，Release Checklist 和回滚预案请做足。
 - 🧾 [**release-checklist Prompt**](../../prompts/deployment/release-checklist.md) — Step 4 配套的发布清单，直接照抄打勾。
 - 🛡️ [**security-review Prompt**](../../prompts/review/security-review.md) — Step 3 安全审查详细模板。

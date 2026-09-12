@@ -14,7 +14,7 @@
 - 产品 / 需求文档里提出了一个**需求级变更**（不是小 typo 那种）
 - 想把一个旧模块"升级"成新版行为（如旧版登录 → OAuth 登录）
 
-> 💡 小贴士：如果项目还不存在、是从 0 到 1 启动，走 [start-project](../start-project/README.md)。如果只是代码报错，走 [debugging](../debugging/README.md)。
+> 💡 小贴士：如果项目还不存在、是从 0 到 1 启动，走 [new-project](../new-project/README.md)。如果只是代码报错，走 [bug-fix](../bug-fix/README.md)。
 
 ---
 
@@ -193,9 +193,69 @@ flowchart LR
 
 ---
 
+## AI Responsibilities
+
+> AI 可以自主做的事情。
+
+- 分析需求（拆 FR / NFR / 验收条件）
+- 扫描目录、读 README / 配置理解现有项目
+- 拆任务（≤ 4 小时粒度 + 标依赖）
+- 写代码（按拆解的任务粒度）
+- 跑测试、跑 Code Review Checklist
+
+## Human Responsibilities
+
+> 必须由人确认的事情。
+
+- 确认验收标准（边界 / 错误路径是否合理）
+- 确认改动范围（哪些模块可以改、哪些不能动）
+- Code Review 结论（修改项是否落地）
+- 合入主分支 / 发布签发
+
+## Stop Conditions
+
+> 什么时候必须停下来。
+
+- 需求不清时停（回 Step 1 补验收条件）
+- 无开发计划时停（回 Step 2 拆任务）
+- 测试不通过时停（不许"假装没看到"提交）
+
+## Output
+
+> 本流程的产出物。
+
+- 需求文档（FR + NFR + 验收条件 + 对旧功能影响）
+- 开发计划（任务清单 + 依赖）
+- 代码变更（小步实现 + 提交记录）
+- 测试结果（新功能 + 回归）
+- Code Review 报告
+
+## Related Skills
+
+- [requirement-analysis](../../skills/core/requirement-analysis/SKILL.md)
+- [project-discovery](../../skills/core/project-discovery/SKILL.md)
+- [task-planning](../../skills/core/task-planning/SKILL.md)
+- [implementation](../../skills/core/implementation/SKILL.md)
+- [testing](../../skills/core/testing/SKILL.md)
+- [code-review](../../skills/core/code-review/SKILL.md)
+- [verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)
+
+## Related Prompts
+
+- [analyze-requirement](../../prompts/architecture/analyze-requirement.md)
+- [understand-project](../../prompts/start-here/understand-project.md)
+- [implement-feature](../../prompts/coding/implement-feature.md)
+- [write-tests](../../prompts/testing/write-tests.md)
+- [verify-feature](../../prompts/testing/verify-feature.md)
+- [code-review](../../prompts/review/code-review.md)
+
+## Related Cases
+
+- [AI Chat](../../cases/golden/001-ai-chat/README.md)
+
 ## Related Workflows · 关联流程
 
-- 🔗 [**start-project**](../start-project/README.md) — 如果项目还没启动，先走它。
-- 🔗 [**debugging**](../debugging/README.md) — 加功能时发现 Bug，走它。
+- 🔗 [**new-project**](../new-project/README.md) — 如果项目还没启动，先走它。
+- 🔗 [**bug-fix**](../bug-fix/README.md) — 加功能时发现 Bug，走它。
 - 🔗 [**refactoring**](../refactoring/README.md) — 写完发现代码丑想拆，走它。
 - 🔗 [**release**](../release/README.md) — 功能 OK 想发布，走它。

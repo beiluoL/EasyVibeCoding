@@ -109,7 +109,7 @@ const name = user?.name || '匿名';
 - [testing](../../skills/core/testing/SKILL.md)
 
 ## Related Workflows
-- [debugging](../../workflows/debugging/README.md)
+- [debugging](../../workflows/bug-fix/README.md)
 
 ## Validation
 - [ ] 文件包含所有规定的 `##` 标题

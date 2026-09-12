@@ -116,7 +116,7 @@ AI 没有走 systematic-debugging 的 9 步流程：
 - 禁止"先改了再说"——改之前必须有根因假设
 - 设修改轮数上限（3 轮无进展就停）
 - 每轮改完必须跑回归测试
-- 使用 [debugging workflow](../../../workflows/debugging/README.md)
+- 使用 [debugging workflow](../../../workflows/bug-fix/README.md)
 
 ### Related Skill
 

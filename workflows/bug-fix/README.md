@@ -149,10 +149,65 @@ flowchart LR
 
 ---
 
+## AI Responsibilities
+
+> AI 可以自主做的事情。
+
+- 复现 Bug（写最小触发步骤）
+- 收集证据（报错日志 / 堆栈 / 现场截图）
+- 定位根因（二分 + 直接原因 / 为什么 / 深层原因）
+- 最小修复（不顺手改别的）
+- 跑回归测试
+
+## Human Responsibilities
+
+> 必须由人确认的事情。
+
+- 确认根因（AI 可能误判，直接修会改错地方）
+- 确认修复范围（涉及多模块时改动面要人审）
+- 回归测试失败时决定继续修还是回退
+- 确认修复可合入
+
+## Stop Conditions
+
+> 什么时候必须停下来。
+
+- 3 轮无进展时停（回 systematic-debugging 重新定位根因）
+- 根因不确定时停（不许凭感觉乱改）
+- 回归测试失败时停（不能直接提交）
+
+## Output
+
+> 本流程的产出物。
+
+- 复现步骤（最小触发步骤 + 期望/实际结果）
+- 根因分析（RCA 小条子）
+- 修复代码（最小改动，无顺便重构）
+- 回归测试结果（针对性测试 + 旧测试全绿）
+
+## Related Skills
+
+- [systematic-debugging](../../skills/core/systematic-debugging/SKILL.md)
+- [testing](../../skills/core/testing/SKILL.md)
+- [code-review](../../skills/core/code-review/SKILL.md)
+- [verification-before-completion](../../skills/core/verification-before-completion/SKILL.md)
+
+## Related Prompts
+
+- [debug-error](../../prompts/debugging/debug-error.md)
+- [analyze-stacktrace](../../prompts/debugging/analyze-stacktrace.md)
+- [fix-regression](../../prompts/debugging/fix-regression.md)
+- [write-tests](../../prompts/testing/write-tests.md)
+- [verify-feature](../../prompts/testing/verify-feature.md)
+
+## Related Cases
+
+- [AI Chat · failures](../../cases/golden/001-ai-chat/failures.md)
+
 ## Related Workflows · 关联流程
 
 - 🔗 [**feature-development**](../feature-development/README.md) — 加新功能时 Bug 最多，Debug 是它的好兄弟。
 - 🔗 [**refactoring**](../refactoring/README.md) — 代码烂才难排 Bug，排完想顺便整理结构走它。
-- 🔗 [**start-project**](../start-project/README.md) — 新项目跑起来出错，先 Debug 再继续做其他功能。
+- 🔗 [**new-project**](../new-project/README.md) — 新项目跑起来出错，先 Debug 再继续做其他功能。
 - 🔗 [**release**](../release/README.md) — 发布前最后一次 Bug 清扫，先过 Debug 再上 Release。
 - 🛑 [**anti-patterns/endless-debug-loop**](../../anti-patterns/endless-debug-loop.md) — 防止"越修越乱"。
