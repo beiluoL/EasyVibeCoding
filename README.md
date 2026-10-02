@@ -2,22 +2,21 @@
   <a href="README.en.md">🌏 English</a> · <strong>🇨🇳 简体中文</strong> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
 </div>
 
-# EasyVibeCoding 🚀
+# EasyVibeCoding
 
-> **From Prompt to Production.**
-> 让不会编程的人，也能用 AI 按工程化方式做出真正能运行的软件。
+**AI 编程工程化实践手册：组织提示词、技能、工作流、案例与失败复盘，让开发过程可复用、可检查。**
 
-[Start Here](docs/getting-started/01-what-is-vibe-coding.md) · [Browse Cases](cases/golden/) · [Browse Skills](skills/) · [Browse Prompts](prompts/)
+[开始阅读](docs/getting-started/01-what-is-vibe-coding.md) · [技能](skills/) · [提示词](prompts/)
 
-> 🌏 **可切换的多语言版本**：点击右上角横幅选择英文 / 繁體中文。详见 [docs/i18n-contributing.md](docs/i18n-contributing.md) 如何贡献新的语言翻译。
+- 从需求拆解、开发到验证，建立可重复的协作流程。
+- 沉淀提示词、技能与案例，记录失败原因和反模式。
+- 当前为实验性内容；未验证条目保留 Not Yet Verified 标记。
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Version](https://img.shields.io/badge/version-V0.1-orange)
-![Format](https://img.shields.io/badge/format-Markdown-blue)
-![Validators](https://img.shields.io/badge/validators-Python-yellow)
-![Status](https://img.shields.io/badge/status-Experimental-red)
+**技术栈 / 主题：** AI Coding · Prompts · Skills · Workflows · Markdown · Python
 
 ---
+
+<!-- TODO(i18n): sync this new introduction to README.zh-TW.md -->
 
 ## 项目介绍
 
