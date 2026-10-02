@@ -2,20 +2,18 @@
   <strong>🌏 English</strong> · <a href="README.md">🇨🇳 简体中文</a> · <a href="README.zh-TW.md">🇹🇼 繁體中文</a>
 </div>
 
-# EasyVibeCoding 🚀
+# EasyVibeCoding
 
-> **From Prompt to Production.**
-> Engineering-grade playbook so that people who can't code can still build real, running software with AI.
+**An engineering playbook for AI coding, organizing prompts, skills, workflows, cases and lessons from failures.**
 
-[Start Here](docs/getting-started/01-what-is-vibe-coding.md) · [Browse Cases](cases/golden/) · [Browse Skills](skills/) · [Browse Prompts](prompts/)
+[Start here](docs/getting-started/01-what-is-vibe-coding.md) · [Skills](skills/) · [Prompts](prompts/)
 
-> 🌏 **Switch languages**: use the banner at the top-right. See [docs/i18n-contributing.md](docs/i18n-contributing.md) to add a new language translation.
+- Build repeatable workflows from requirements through implementation and verification.
+- Reuse prompts, skills and cases, and document failures and anti-patterns.
+- Experimental content; unverified items retain their Not Yet Verified labels.
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Version](https://img.shields.io/badge/version-V0.1-orange)
-![Format](https://img.shields.io/badge/format-Markdown-blue)
-![Validators](https://img.shields.io/badge/validators-Python-yellow)
-![Status](https://img.shields.io/badge/status-Experimental-red)
+**Technology / topics:** AI Coding · Prompts · Skills · Workflows · Markdown · Python
+
 
 ---
 
